@@ -29,45 +29,37 @@
 
 			<h2 class="text-center" >Nuestras empresas</h2>
 
-			<div class="columna quinto medium-4 small-6">
-				<a href="#"><img src="<?php echo THEMEPATH; ?>/images/logo-belmont.jpg" alt=""></a>
-			</div><!-- quinto -->
+			<div class="columna columna c-3 medium-4 small-6 inmobiliaria">
+				<a data-empresa="belmont-village" href="#"><img src="<?php echo THEMEPATH; ?>images/belmont.jpg" alt=""></a>
+			</div><!-- columna c-3 -->
 
-			<div class="columna quinto medium-4 small-6">
-				<a href="#"><img src="<?php echo THEMEPATH; ?>/images/logo-kiwi.jpg" alt=""></a>
-			</div><!-- quinto -->
+			<div class="columna columna c-3 medium-4 small-6 financiera">
+				<a data-empresa="quiero-billete" href="#"><img src="<?php echo THEMEPATH; ?>images/quiero-billete.jpg" alt=""></a>
+			</div><!-- columna c-3 -->
 
-			<div class="columna quinto medium-4 small-6">
-				<a href="#"><img src="<?php echo THEMEPATH; ?>/images/logo-lm.jpg" alt=""></a>
-			</div><!-- quinto -->
+			<div class="columna columna c-3 medium-4 small-6 financiera">
+				<a data-empresa="kiwi" href="#"><img src="<?php echo THEMEPATH; ?>images/kiwi.jpg" alt=""></a>
+			</div><!-- columna c-3 -->
 
-			<div class="columna quinto medium-4 small-6">
-				<a href="#"><img src="<?php echo THEMEPATH; ?>/images/logo-habitavi.jpg" alt=""></a>
-			</div><!-- quinto -->
+			<div class="columna columna c-3 medium-4 small-6 financiera">
+				<a data-empresa="habitavi" href="#"><img src="<?php echo THEMEPATH; ?>images/habitavi.jpg" alt=""></a>
+			</div><!-- columna c-3 -->
 
-			<div class="columna quinto medium-4 small-6">
-				<a href="#"><img src="<?php echo THEMEPATH; ?>/images/logo-habitavi.jpg" alt=""></a>
-			</div><!-- quinto -->
+			<div class="columna columna c-3 medium-4 small-6 educacion">
+				<a data-empresa="quiero-confianza" href="#"><img src="<?php echo THEMEPATH; ?>images/quiero-confianza.jpg" alt=""></a>
+			</div><!-- columna c-3 -->
 
-			<div class="columna quinto medium-4 small-6">
-				<a href="#"><img src="<?php echo THEMEPATH; ?>/images/logo-quiero-billete.jpg" alt=""></a>
-			</div><!-- quinto -->
+			<div class="columna columna c-3 medium-4 small-6 it">
+				<a data-empresa="quiero-casa" href="#"><img src="<?php echo THEMEPATH; ?>images/quiero-casa.jpg" alt=""></a>
+			</div><!-- columna c-3 -->
 
-			<div class="columna quinto medium-4 small-6">
-				<a href="#"><img src="<?php echo THEMEPATH; ?>/images/logo-quiero-confianza.jpg" alt=""></a>
-			</div><!-- quinto -->
+			<div class="columna columna c-3 medium-4 small-6 it">
+				<a data-empresa="construyendo-y-creciendo" href="#"><img src="<?php echo THEMEPATH; ?>images/construyendo-y-creciendo.jpg" alt=""></a>
+			</div><!-- columna c-3 -->
 
-			<div class="columna quinto medium-4 small-6">
-				<a href="#"><img src="<?php echo THEMEPATH; ?>/images/logo-quiero-casa.jpg" alt=""></a>
-			</div><!-- quinto -->
-
-			<div class="columna quinto medium-4 small-6">
-				<a href="#"><img src="<?php echo THEMEPATH; ?>/images/logo-quiero-casa.jpg" alt=""></a>
-			</div><!-- quinto -->
-
-			<div class="columna quinto medium-4 small-6">
-				<a href="#"><img src="<?php echo THEMEPATH; ?>/images/logo-quiero-casa.jpg" alt=""></a>
-			</div><!-- quinto -->
+			<div class="columna columna c-3 medium-4 small-6 responsabilidad-social">
+				<a data-empresa="tecnologias-en-habilitadoshin" href="#"><img src="<?php echo THEMEPATH; ?>images/tecnologias-en-habilitadoshin.jpg" alt=""></a>
+			</div><!-- columna c-3 -->
 
 		</section>
 
@@ -80,25 +72,25 @@
 
 			<h2 class="text-center" >Últimas noticias</h2>
 
-			<div class="post columna c-3">
+			<div class="post columna c-3 medium-6 small-12 margin-bottom">
 				<img src="<?php echo THEMEPATH; ?>/images/noticia.jpg" alt="">
 				<a href="#"><div class="overlay"></div></a>
 				<h3><a href="#">Egone non intellego</a></h3>
 			</div><!-- post -->
 
-			<div class="post columna c-3">
+			<div class="post columna c-3 medium-6 small-12 margin-bottom">
 				<img src="<?php echo THEMEPATH; ?>/images/noticia.jpg" alt="">
 				<a href="#"><div class="overlay"></div></a>
 				<h3><a href="#">Egone non intellego</a></h3>
 			</div><!-- post -->
 
-			<div class="post columna c-3">
+			<div class="post columna c-3 medium-6 small-12 margin-bottom">
 				<img src="<?php echo THEMEPATH; ?>/images/noticia.jpg" alt="">
 				<a href="#"><div class="overlay"></div></a>
 				<h3><a href="#">Egone non intellego</a></h3>
 			</div><!-- post -->
 
-			<div class="post columna c-3">
+			<div class="post columna c-3 medium-6 small-12 margin-bottom">
 				<img src="<?php echo THEMEPATH; ?>/images/noticia.jpg" alt="">
 				<a href="#"><div class="overlay"></div></a>
 				<h3><a href="#">Egone non intellego</a></h3>

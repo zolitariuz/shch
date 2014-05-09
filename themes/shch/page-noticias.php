@@ -15,55 +15,55 @@
 
 			<h2 class="text-center" >Noticias</h2>
 
-			<div class="columna c-4 post big">
+			<div class="columna c-4 medium-6 small-12 post big">
 				<a href="#"><img src="<?php echo THEMEPATH; ?>/images/noticia.jpg" alt=""></a>
 				<h3><a href="#">Egone non intellego</a></h3>
 				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit zenonis est inquam hoc stoici hoc mihi cum tuo fratre convenit duo reges constructio interrete hanc quoque.</p>
 			</div><!-- post -->
 
-			<div class="columna c-4 post big">
+			<div class="columna c-4 medium-6 small-12 post big">
 				<a href="#"><img src="<?php echo THEMEPATH; ?>/images/noticia.jpg" alt=""></a>
 				<h3><a href="#">Egone non intellego</a></h3>
 				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit zenonis est inquam hoc stoici hoc mihi cum tuo fratre convenit duo reges constructio interrete hanc quoque.</p>
 			</div><!-- post -->
 
-			<div class="columna c-4 post big">
+			<div class="columna c-4 medium-6 small-12 post big">
 				<a href="#"><img src="<?php echo THEMEPATH; ?>/images/noticia.jpg" alt=""></a>
 				<h3><a href="#">Egone non intellego</a></h3>
 				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit zenonis est inquam hoc stoici hoc mihi cum tuo fratre convenit duo reges constructio interrete hanc quoque.</p>
 			</div><!-- post -->
 
-			<div class="columna c-4 post big">
+			<div class="columna c-4 medium-6 small-12 post big">
 				<a href="#"><img src="<?php echo THEMEPATH; ?>/images/noticia.jpg" alt=""></a>
 				<h3><a href="#">Egone non intellego</a></h3>
 				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit zenonis est inquam hoc stoici hoc mihi cum tuo fratre convenit duo reges constructio interrete hanc quoque.</p>
 			</div><!-- post -->
 
-			<div class="columna c-4 post big">
+			<div class="columna c-4 medium-6 small-12 post big">
 				<a href="#"><img src="<?php echo THEMEPATH; ?>/images/noticia.jpg" alt=""></a>
 				<h3><a href="#">Egone non intellego</a></h3>
 				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit zenonis est inquam hoc stoici hoc mihi cum tuo fratre convenit duo reges constructio interrete hanc quoque.</p>
 			</div><!-- post -->
 
-			<div class="columna c-4 post big">
+			<div class="columna c-4 medium-6 small-12 post big">
 				<a href="#"><img src="<?php echo THEMEPATH; ?>/images/noticia.jpg" alt=""></a>
 				<h3><a href="#">Egone non intellego</a></h3>
 				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit zenonis est inquam hoc stoici hoc mihi cum tuo fratre convenit duo reges constructio interrete hanc quoque.</p>
 			</div><!-- post -->
 
-			<div class="columna c-4 post big">
+			<div class="columna c-4 medium-6 small-12 post big">
 				<a href="#"><img src="<?php echo THEMEPATH; ?>/images/noticia.jpg" alt=""></a>
 				<h3><a href="#">Egone non intellego</a></h3>
 				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit zenonis est inquam hoc stoici hoc mihi cum tuo fratre convenit duo reges constructio interrete hanc quoque.</p>
 			</div><!-- post -->
 
-			<div class="columna c-4 post big">
+			<div class="columna c-4 medium-6 small-12 post big">
 				<a href="#"><img src="<?php echo THEMEPATH; ?>/images/noticia.jpg" alt=""></a>
 				<h3><a href="#">Egone non intellego</a></h3>
 				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit zenonis est inquam hoc stoici hoc mihi cum tuo fratre convenit duo reges constructio interrete hanc quoque.</p>
 			</div><!-- post -->
 
-			<div class="columna c-4 post big">
+			<div class="columna c-4 medium-6 small-12 post big">
 				<a href="#"><img src="<?php echo THEMEPATH; ?>/images/noticia.jpg" alt=""></a>
 				<h3><a href="#">Egone non intellego</a></h3>
 				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit zenonis est inquam hoc stoici hoc mihi cum tuo fratre convenit duo reges constructio interrete hanc quoque.</p>

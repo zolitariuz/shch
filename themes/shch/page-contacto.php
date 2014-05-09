@@ -15,7 +15,7 @@
 
 			<h2 class="text-center">Contacto</h2>
 
-			<form action="<?php echo site_url( 'contacto-recibido') ?>" class="contacto columna c-8 center" method="post">
+			<form action="<?php echo site_url( 'contacto-recibido') ?>" class="contacto columna c-8 small-12 center" method="post">
 
 				<label class="full" for="nombre">Nombre</label>
 				<input class="full required" name="nombre" type="text">

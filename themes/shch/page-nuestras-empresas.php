@@ -73,12 +73,12 @@
 
 		<div class="width clearfix">
 
-			<div class="columna c-6">
+			<div class="columna c-6 small-12">
 				<h4>Belmont Village</h4>
 				<p>Diviserunt naturam hominis in animum et corpus. Quae cum dixisset paulumque institisset, Quid est? Haec quo modo conveniant, non sane intellego. Atque haec coniunctio confusioque virtutum tamen a philosophis ratione quadam distinguitur. </p>
 			</div>
 
-			<div class="columna c-6 slider cycle-slideshow"
+			<div class="columna c-6 small-12 slider cycle-slideshow"
 				data-cycle-fx="scrollHorz"
 				data-cycle-swipe="true"
 			>
@@ -102,12 +102,12 @@
 
 		<div class="width clearfix">
 
-			<div class="columna c-6">
+			<div class="columna c-6 small-12">
 				<h4>Quiero billete</h4>
 				<p>Diviserunt naturam hominis in animum et corpus. Quae cum dixisset paulumque institisset, Quid est? Haec quo modo conveniant, non sane intellego. Atque haec coniunctio confusioque virtutum tamen a philosophis ratione quadam distinguitur. </p>
 			</div>
 
-			<div class="columna c-6 slider cycle-slideshow"
+			<div class="columna c-6 small-12 slider cycle-slideshow"
 				data-cycle-fx="scrollHorz"
 				data-cycle-swipe="true"
 			>
@@ -131,12 +131,12 @@
 
 		<div class="width clearfix">
 
-			<div class="columna c-6">
+			<div class="columna c-6 small-12">
 				<h4>Quiero billete</h4>
 				<p>Diviserunt naturam hominis in animum et corpus. Quae cum dixisset paulumque institisset, Quid est? Haec quo modo conveniant, non sane intellego. Atque haec coniunctio confusioque virtutum tamen a philosophis ratione quadam distinguitur. </p>
 			</div>
 
-			<div class="columna c-6 slider cycle-slideshow"
+			<div class="columna c-6 small-12 slider cycle-slideshow"
 				data-cycle-fx="scrollHorz"
 				data-cycle-swipe="true"
 			>
@@ -160,12 +160,12 @@
 
 		<div class="width clearfix">
 
-			<div class="columna c-6">
+			<div class="columna c-6 small-12">
 				<h4>Quiero billete</h4>
 				<p>Diviserunt naturam hominis in animum et corpus. Quae cum dixisset paulumque institisset, Quid est? Haec quo modo conveniant, non sane intellego. Atque haec coniunctio confusioque virtutum tamen a philosophis ratione quadam distinguitur. </p>
 			</div>
 
-			<div class="columna c-6 slider cycle-slideshow"
+			<div class="columna c-6 small-12 slider cycle-slideshow"
 				data-cycle-fx="scrollHorz"
 				data-cycle-swipe="true"
 			>
@@ -189,12 +189,12 @@
 
 		<div class="width clearfix">
 
-			<div class="columna c-6">
+			<div class="columna c-6 small-12">
 				<h4>Quiero billete</h4>
 				<p>Diviserunt naturam hominis in animum et corpus. Quae cum dixisset paulumque institisset, Quid est? Haec quo modo conveniant, non sane intellego. Atque haec coniunctio confusioque virtutum tamen a philosophis ratione quadam distinguitur. </p>
 			</div>
 
-			<div class="columna c-6 slider cycle-slideshow"
+			<div class="columna c-6 small-12 slider cycle-slideshow"
 				data-cycle-fx="scrollHorz"
 				data-cycle-swipe="true"
 			>
@@ -218,12 +218,12 @@
 
 		<div class="width clearfix">
 
-			<div class="columna c-6">
+			<div class="columna c-6 small-12">
 				<h4>Quiero billete</h4>
 				<p>Diviserunt naturam hominis in animum et corpus. Quae cum dixisset paulumque institisset, Quid est? Haec quo modo conveniant, non sane intellego. Atque haec coniunctio confusioque virtutum tamen a philosophis ratione quadam distinguitur. </p>
 			</div>
 
-			<div class="columna c-6 slider cycle-slideshow"
+			<div class="columna c-6 small-12 slider cycle-slideshow"
 				data-cycle-fx="scrollHorz"
 				data-cycle-swipe="true"
 			>
@@ -247,12 +247,12 @@
 
 		<div class="width clearfix">
 
-			<div class="columna c-6">
+			<div class="columna c-6 small-12">
 				<h4>Quiero billete</h4>
 				<p>Diviserunt naturam hominis in animum et corpus. Quae cum dixisset paulumque institisset, Quid est? Haec quo modo conveniant, non sane intellego. Atque haec coniunctio confusioque virtutum tamen a philosophis ratione quadam distinguitur. </p>
 			</div>
 
-			<div class="columna c-6 slider cycle-slideshow"
+			<div class="columna c-6 small-12 slider cycle-slideshow"
 				data-cycle-fx="scrollHorz"
 				data-cycle-swipe="true"
 			>
@@ -276,12 +276,12 @@
 
 		<div class="width clearfix">
 
-			<div class="columna c-6">
+			<div class="columna c-6 small-12">
 				<h4>Quiero billete</h4>
 				<p>Diviserunt naturam hominis in animum et corpus. Quae cum dixisset paulumque institisset, Quid est? Haec quo modo conveniant, non sane intellego. Atque haec coniunctio confusioque virtutum tamen a philosophis ratione quadam distinguitur. </p>
 			</div>
 
-			<div class="columna c-6 slider cycle-slideshow"
+			<div class="columna c-6 small-12 slider cycle-slideshow"
 				data-cycle-fx="scrollHorz"
 				data-cycle-swipe="true"
 			>
