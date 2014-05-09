@@ -103,6 +103,8 @@ figure {margin: 0;}
 @claro: 		#fff;
 @highlight:		#5e6161;
 
+@warning: 		#e74c3c;
+
 @margen: 	20px;
 
 /*** MIXINS ***/
@@ -208,6 +210,8 @@ figure {margin: 0;}
 .no-margin{ margin: 0 !important; }
 .no-margin-bottom{ margin-bottom: 0 !important; }
 
+.margin-bottom{ margin-bottom:  @margen !important; }
+
 //layout
 .container{ min-width: 300px; }
 .width{ width: 90%; min-width: 300px; max-width: 2200px; margin: 0 auto 0 auto; }
@@ -285,7 +289,11 @@ body{ background: #fff; .font; .helvetica('normal'); }
 	img{ display: block; width: 100%; height: auto; }
 }
 
-//Bullets
+h2{ margin: 0 0 (@margen*2) 0; .font(1.4em, 1em); letter-spacing: 0.2em; .helvetica(300); color: @highlight; text-transform: uppercase; }
+
+h4{  margin: 0 0 @margen 0; .font(1em, 1em); letter-spacing: 0.2em; .helvetica(300); color: @highlight; text-transform: uppercase; }
+
+//Seccion
 section{ margin-bottom: (@margen*2) !important;
 	.icon{ margin: 0 0 @margen 0; position: relative;
 		span{ display: block; width: (@margen*2); height: (@margen*2); margin: auto; .font(2em, 1.4em); text-align: center; color: @highlight; background: @claro; .border-radius(20px); position: relative; top: 10px; z-index: 2; .transition;
@@ -294,7 +302,7 @@ section{ margin-bottom: (@margen*2) !important;
 		hr{ height: 1px; border: 0; margin: 0; background: @highlight; position: relative; top: -10px; z-index: 1; }
 	}
 
-	h2{ margin: 0 0 (@margen*2) 0; .font(1.4em, 1em); letter-spacing: 0.2em; .helvetica(300); color: @highlight; text-transform: uppercase; }
+	img{}
 
 	p{ margin-bottom: @margen !important; color: @highlight; .font(1.2em, 1.3em); font-weight: 300; }
 
@@ -314,7 +322,7 @@ section{ margin-bottom: (@margen*2) !important;
 	a{ display: block; width: 100%; height: 100%; color: @claro; text-decoration: none; position: absolute; top: 0; left: 0;
 		.overlay{ width: 100%; height: 100%; background: rgba(0,0,0, 0.2); }
 	}
-	h3{ width: 100%; margin: 0; color: @claro; text-align: center; .font(1em,); position: absolute; top: 40%; left: 0; }
+	h3{ width: 100%; margin: 0; color: @claro; text-align: center; .font(1em); position: absolute; top: 40%; left: 0; }
 
 }
 
@@ -329,7 +337,7 @@ header{ padding: @margen 0;
 	}
 
 	nav{ padding-top: 4%;
-		a{ display: inline-block; vertical-align: middle; width: 16%; padding-bottom: (@margen/2); .font(0.9em, 1.2em); .helvetica(300); letter-spacing: 0.1em; color: @highlight; text-transform: uppercase; text-decoration: none; text-align: center;
+		a{ display: inline-block; vertical-align: middle; width: 19%; padding-bottom: (@margen/2); .font(0.9em, 1.2em); .helvetica(300); letter-spacing: 0.1em; color: @highlight; text-transform: uppercase; text-decoration: none; text-align: center;
 			&:hover, &.activo{ border-bottom: 1px solid @highlight; }
 		}
 	}
@@ -346,10 +354,35 @@ footer{ padding: @margen 0; background: url('images/pattern.png') repeat @highli
 	p{ margin-bottom: 0; color: @claro; .font(0.9em, 1.1em); }
 }
 
+/*** NUESTRAS EMPRESAS ***/
+
+.divisiones{ margin: 0 0 (@margen*2) 0; list-style: none; text-align: center;
+	li{ display: inline-block; margin: 0 1%; padding: @margen/4 @margen/6 @margen/6 @margen/6; border-bottom: 1px solid @highlight; .font(1em, 1em); color: @highlight; cursor: pointer; .transition;
+		&:hover, &.activo{ background: @highlight; color: @claro; }
+	}
+}
+
+.cover{ margin-bottom: @margen; background: no-repeat @highlight fixed center; background-size: cover;
+	&.belmont{ background-image: url('images/cover-belmont.jpg') }
+	&.registro{ background-image: url('images/registro-back.jpg') }
+	&.fechas{ background-image: url('images/fechas-back.jpg') }
+	&.compartelo{ background-image: url('images/compartelo-back.jpg') }
+
+	img{ padding: (@margen*2); }
+}
+
+.cycle-pager{ width: 100%; text-align: center; position: absolute; bottom: 0; z-index: 1000;
+	span{ display: inline-block; font-size: 3em; color: @highlight; cursor: pointer;
+		&.cycle-pager-active{ color: @claro; }
+	}
+}
+
 /*** CONTACTO ***/
 
 form{
-	label{ display: block; margin-bottom: (@margen/2); .font(1.2em, 1em); .helvetica(300); letter-spacing: 0.05em; color: @highlight; }
+	label{ display: block; margin-bottom: (@margen/2); .font(1.2em, 1em); .helvetica(300); letter-spacing: 0.05em; color: @highlight;
+		&.error{ margin-top: -(@margen - 5); .font(0.8em, 1em); font-style: italic; color: @warning; }
+	}
 
 	input, textarea{ margin-bottom: @margen; padding: (@margen/4); border: 1px solid @highlight; color: @highlight;
 		&:focus{ outline-color: @highlight; }

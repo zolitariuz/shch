@@ -10,7 +10,7 @@
 	define( 'CSSPATH', get_template_directory_uri() . '/css/' );
 
 	define( 'THEMEPATH', get_template_directory_uri() . '/' );
-	
+
 	define( 'SITEURL', site_url('/') );
 
 
@@ -22,8 +22,8 @@
 	add_action( 'wp_enqueue_scripts', function(){
 
 		// scripts
-		wp_enqueue_script( 'plugins', JSPATH.'plugins.js', array('jquery'), '1.0', true );
-		wp_enqueue_script( 'functions', JSPATH.'functions.js', array('plugins'), '1.0', true );
+		wp_enqueue_script( 'plugins', JSPATH.'plugins.min.js', array('jquery'), '1.0', true );
+		wp_enqueue_script( 'functions', JSPATH.'functions.min.js', array('plugins'), '1.0', true );
 
 		// localize scripts
 		wp_localize_script( 'functions', 'ajax_url', admin_url('admin-ajax.php') );
@@ -59,10 +59,10 @@
 
 
 	/*add_action( 'after_setup_theme', function () {
-		
+
 		$frontPage = get_page_by_path('home', OBJECT);
 		$blogPage  = get_page_by_path('blog', OBJECT);
-		
+
 		if ( $frontPage AND $blogPage ){
 			update_option('show_on_front', 'page');
 			update_option('page_on_front', $frontPage->ID);
@@ -102,9 +102,9 @@
 	}
 
 	if ( function_exists('add_image_size') ){
-		
+
 		// add_image_size( 'size_name', 200, 200, true );
-		
+
 		// cambiar el tamaño del thumbnail
 		/*
 		update_option( 'thumbnail_size_h', 100 );
@@ -129,8 +129,8 @@
 
 
 	require_once('inc/pages.php');
-	
-	
+
+
 	require_once('inc/users.php');
 
 

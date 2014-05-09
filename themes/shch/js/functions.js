@@ -4,10 +4,6 @@
 
 	$(function(){
 
-
-		console.log('hello from functions.js');
-
-
 		/**
 		 * Validación de emails
 		 */
@@ -19,7 +15,7 @@
 
 
 		/**
-		 * Regresa todos los valores de un formulario como un associative array 
+		 * Regresa todos los valores de un formulario como un associative array
 		 */
 		window.getFormData = function (selector) {
 			var result = [],
@@ -30,6 +26,38 @@
 			});
 			return result;
 		}
+
+		//Contacto
+		$('form.contacto').validate();
+
+		//Nuestras empresas - isotope
+		var $container = $('#isotope');
+
+		$container.isotope({
+			itemSelector: '.columna',
+			layoutMode: 'fitRows'
+		});
+
+		$('.divisiones li').on( 'click', function() {
+			var filterValue = $(this).attr('data-filter');
+			$container.isotope({ filter: filterValue });
+			$('.divisiones li').removeClass('activo');
+			$(this).addClass('activo');
+		});
+
+		//Nuestras empresas - link a empresa
+		var empresa,
+			divPosicion;
+
+		$('#isotope a').on('click', function(){
+
+			empresa = $(this).data('empresa');
+			divPosicion = $('.'+empresa).offset().top,
+			divPosicion = divPosicion - 100;
+
+			$('html, body').animate({scrollTop: divPosicion}, 500);
+
+		});
 
 
 	});
