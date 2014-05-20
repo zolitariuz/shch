@@ -21,42 +21,41 @@
 				<li class="activo" data-filer="*">Todas</li>
 				<li data-filter=".inmobiliaria">Inmobiliaria</li>
 				<li data-filter=".it">IT</li>
-				<li data-filter=".educacion">Educación</li>
 				<li data-filter=".financiera">Financiera</li>
 				<li data-filter=".responsabilidad-social">Responsabilidad social</li>
 			</ul>
 
 			<div id="isotope">
 
-				<div class="columna columna c-3 medium-4 small-6 inmobiliaria">
+				<div class="columna empresa c-3 medium-4 small-6 inmobiliaria">
 					<a data-empresa="belmont-village" href="#"><img src="<?php echo THEMEPATH; ?>images/belmont.jpg" alt=""></a>
 				</div><!-- columna c-3 -->
 
-				<div class="columna columna c-3 medium-4 small-6 financiera">
+				<div class="columna empresa c-3 medium-4 small-6 financiera">
 					<a data-empresa="quiero-billete" href="#"><img src="<?php echo THEMEPATH; ?>images/quiero-billete.jpg" alt=""></a>
 				</div><!-- columna c-3 -->
 
-				<div class="columna columna c-3 medium-4 small-6 financiera">
+				<div class="columna empresa c-3 medium-4 small-6 financiera">
 					<a data-empresa="kiwi" href="#"><img src="<?php echo THEMEPATH; ?>images/kiwi.jpg" alt=""></a>
 				</div><!-- columna c-3 -->
 
-				<div class="columna columna c-3 medium-4 small-6 financiera">
-					<a data-empresa="habitavi" href="#"><img src="<?php echo THEMEPATH; ?>images/habitavi.jpg" alt=""></a>
+				<div class="columna empresa c-3 medium-4 small-6 financiera">
+					<a data-empresa="habitavi" hrezf="#"><img src="<?php echo THEMEPATH; ?>images/habitavi.jpg" alt=""></a>
 				</div><!-- columna c-3 -->
 
-				<div class="columna columna c-3 medium-4 small-6 educacion">
+				<div class="columna empresa c-3 medium-4 small-6 educacion">
 					<a data-empresa="quiero-confianza" href="#"><img src="<?php echo THEMEPATH; ?>images/quiero-confianza.jpg" alt=""></a>
 				</div><!-- columna c-3 -->
 
-				<div class="columna columna c-3 medium-4 small-6 it">
+				<div class="columna empresa c-3 medium-4 small-6 it">
 					<a data-empresa="quiero-casa" href="#"><img src="<?php echo THEMEPATH; ?>images/quiero-casa.jpg" alt=""></a>
 				</div><!-- columna c-3 -->
 
-				<div class="columna columna c-3 medium-4 small-6 it">
+				<div class="columna empresa c-3 medium-4 small-6 it">
 					<a data-empresa="construyendo-y-creciendo" href="#"><img src="<?php echo THEMEPATH; ?>images/construyendo-y-creciendo.jpg" alt=""></a>
 				</div><!-- columna c-3 -->
 
-				<div class="columna columna c-3 medium-4 small-6 responsabilidad-social">
+				<div class="columna empresa c-3 medium-4 small-6 responsabilidad-social">
 					<a data-empresa="tecnologias-en-habilitadoshin" href="#"><img src="<?php echo THEMEPATH; ?>images/tecnologias-en-habilitadoshin.jpg" alt=""></a>
 				</div><!-- columna c-3 -->
 
@@ -68,7 +67,7 @@
 	<section class="empresa belmont-village">
 
 		<div class="cover belmont full">
-			<img class="block center columna c-6" src="<?php echo THEMEPATH; ?>images/belmont-blanco.png" alt="">
+			<img class="block center columna c-4" src="<?php echo THEMEPATH; ?>images/belmont-blanco.png" alt="">
 		</div><!-- cover -->
 
 		<div class="width clearfix">
@@ -97,7 +96,7 @@
 	<section class="empresa quiero-billete">
 
 		<div class="cover belmont full">
-			<img class="block center columna c-6" src="<?php echo THEMEPATH; ?>images/quiero-billete-blanco.png" alt="">
+			<img class="block center columna c-4" src="<?php echo THEMEPATH; ?>images/quiero-billete-blanco.png" alt="">
 		</div><!-- cover -->
 
 		<div class="width clearfix">
@@ -126,7 +125,7 @@
 	<section class="empresa kiwi">
 
 		<div class="cover belmont full">
-			<img class="block center columna c-6" src="<?php echo THEMEPATH; ?>images/kiwi-blanco.png" alt="">
+			<img class="block center columna c-4" src="<?php echo THEMEPATH; ?>images/kiwi-blanco.png" alt="">
 		</div><!-- cover -->
 
 		<div class="width clearfix">
@@ -155,7 +154,7 @@
 	<section class="empresa habitavi">
 
 		<div class="cover belmont full">
-			<img class="block center columna c-6" src="<?php echo THEMEPATH; ?>images/habitavi-blanco.png" alt="">
+			<img class="block center columna c-4" src="<?php echo THEMEPATH; ?>images/habitavi-blanco.png" alt="">
 		</div><!-- cover -->
 
 		<div class="width clearfix">
@@ -184,7 +183,7 @@
 	<section class="empresa quiero-confianza">
 
 		<div class="cover belmont full">
-			<img class="block center columna c-6" src="<?php echo THEMEPATH; ?>images/quiero-confianza-blanco.png" alt="">
+			<img class="block center columna c-4" src="<?php echo THEMEPATH; ?>images/quiero-confianza-blanco.png" alt="">
 		</div><!-- cover -->
 
 		<div class="width clearfix">
@@ -213,7 +212,7 @@
 	<section class="empresa quiero-casa">
 
 		<div class="cover belmont full">
-			<img class="block center columna c-6" src="<?php echo THEMEPATH; ?>images/quiero-casa-blanco.png" alt="">
+			<img class="block center columna c-4" src="<?php echo THEMEPATH; ?>images/quiero-casa-blanco.png" alt="">
 		</div><!-- cover -->
 
 		<div class="width clearfix">
@@ -242,7 +241,7 @@
 	<section class="empresa construyendo-y-creciendo">
 
 		<div class="cover belmont full">
-			<img class="block center columna c-6" src="<?php echo THEMEPATH; ?>images/construyendo-y-creciendo-blanco.png" alt="">
+			<img class="block center columna c-4" src="<?php echo THEMEPATH; ?>images/construyendo-y-creciendo-blanco.png" alt="">
 		</div><!-- cover -->
 
 		<div class="width clearfix">
@@ -271,7 +270,7 @@
 	<section class="empresa tecnologias-en-habilitadoshin">
 
 		<div class="cover belmont full">
-			<img class="block center columna c-6" src="<?php echo THEMEPATH; ?>images/tecnologias-en-habilitadoshin-blanco.png" alt="">
+			<img class="block center columna c-5" src="<?php echo THEMEPATH; ?>images/tecnologias-en-habilitadoshin-blanco.png" alt="">
 		</div><!-- cover -->
 
 		<div class="width clearfix">

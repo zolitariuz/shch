@@ -59,6 +59,19 @@
 
 		});
 
+		//Nuestras empresas - color en hover
+		var src;
+		$('.empresa img').hover(
+			function() {
+				src = $(this).attr('src');
+				var srcColor = src.replace('images/', 'images/color-' );
+				//console.log(src);
+				$(this).attr('src', srcColor);
+			}, function() {
+				$(this).attr('src', src);
+			}
+		);
+
 
 	});
 

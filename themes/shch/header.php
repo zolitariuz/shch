@@ -21,7 +21,7 @@
 
 				<div class="width clearfix">
 
-					<h1 class="block columna c-2">
+					<h1 class="block columna">
 						<a href="<?php echo site_url(); ?>">
 							<img src="<?php echo THEMEPATH; ?>/images/logo-shch.png" alt="" />
 						</a>
