@@ -8,10 +8,10 @@
 
 		<section class="columna c-12 center">
 
-			<div class="icon">
+			<a href="<?php echo site_url('nosotros') ?>" class="icon block">
 				<span class="icon-shch"></span>
 				<hr>
-			</div>
+			</a>
 
 			<h2 class="text-center" >La empresa</h2>
 
@@ -22,42 +22,42 @@
 
 		<section class="columna c-12 center clearfix">
 
-			<div class="icon">
+			<a href="<?php echo site_url('nuestras-empresas') ?>" class="icon block">
 				<span class="icon-shch"></span>
 				<hr>
-			</div>
+			</a>
 
 			<h2 class="text-center" >Nuestras empresas</h2>
 
-			<div class="columna columna c-3 medium-4 small-6 inmobiliaria">
+			<div class="columna empresa c-3 medium-4 small-6 inmobiliaria">
 				<a data-empresa="belmont-village" href="#"><img src="<?php echo THEMEPATH; ?>images/belmont.jpg" alt=""></a>
 			</div><!-- columna c-3 -->
 
-			<div class="columna columna c-3 medium-4 small-6 financiera">
+			<div class="columna empresa c-3 medium-4 small-6 financiera">
 				<a data-empresa="quiero-billete" href="#"><img src="<?php echo THEMEPATH; ?>images/quiero-billete.jpg" alt=""></a>
 			</div><!-- columna c-3 -->
 
-			<div class="columna columna c-3 medium-4 small-6 financiera">
+			<div class="columna empresa c-3 medium-4 small-6 financiera">
 				<a data-empresa="kiwi" href="#"><img src="<?php echo THEMEPATH; ?>images/kiwi.jpg" alt=""></a>
 			</div><!-- columna c-3 -->
 
-			<div class="columna columna c-3 medium-4 small-6 financiera">
+			<div class="columna empresa c-3 medium-4 small-6 financiera">
 				<a data-empresa="habitavi" href="#"><img src="<?php echo THEMEPATH; ?>images/habitavi.jpg" alt=""></a>
 			</div><!-- columna c-3 -->
 
-			<div class="columna columna c-3 medium-4 small-6 educacion">
+			<div class="columna empresa c-3 medium-4 small-6 educacion">
 				<a data-empresa="quiero-confianza" href="#"><img src="<?php echo THEMEPATH; ?>images/quiero-confianza.jpg" alt=""></a>
 			</div><!-- columna c-3 -->
 
-			<div class="columna columna c-3 medium-4 small-6 it">
+			<div class="columna empresa c-3 medium-4 small-6 it">
 				<a data-empresa="quiero-casa" href="#"><img src="<?php echo THEMEPATH; ?>images/quiero-casa.jpg" alt=""></a>
 			</div><!-- columna c-3 -->
 
-			<div class="columna columna c-3 medium-4 small-6 it">
+			<div class="columna empresa c-3 medium-4 small-6 it">
 				<a data-empresa="construyendo-y-creciendo" href="#"><img src="<?php echo THEMEPATH; ?>images/construyendo-y-creciendo.jpg" alt=""></a>
 			</div><!-- columna c-3 -->
 
-			<div class="columna columna c-3 medium-4 small-6 responsabilidad-social">
+			<div class="columna empresa c-3 medium-4 small-6 responsabilidad-social">
 				<a data-empresa="tecnologias-en-habilitadoshin" href="#"><img src="<?php echo THEMEPATH; ?>images/tecnologias-en-habilitadoshin.jpg" alt=""></a>
 			</div><!-- columna c-3 -->
 
@@ -65,10 +65,10 @@
 
 		<section class="columna c-12 center clearfix">
 
-			<div class="icon">
+			<a href="<?php echo site_url('noticias') ?>" class="icon block">
 				<span class="icon-shch"></span>
 				<hr>
-			</div>
+			</a>
 
 			<h2 class="text-center" >Últimas noticias</h2>
 
