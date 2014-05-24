@@ -13,10 +13,18 @@
 				<hr>
 			</a>
 
-			<h2 class="text-center" >La empresa</h2>
+			<?php
+			$laEmpresa = get_page_by_title( 'La empresa' );
+			$laEmpresaId = $laEmpresa->ID;
+			$laEmpresaContent = $laEmpresa->post_content;
+			?>
 
-			<p class="columna c-8 medium-10 small-12 center">Somos un grupo de negocios dinámico y exitoso que ha logrado mantener un ritmo de crecimiento envidiable así como una rentabilidad atractiva para nuestros inversionistas y socios. Diversificamos nuestra participación en distintas industrias buscando siempre oportunidades de negocio extraordinarias que generen sinergia con el resto de las iniciativas que ya poseemos.</p>
-			<p class="columna c-8 medium-10 small-12 center">Además contamos en la industria inmobiliaria con un negocio consolidado y brioso que con base en la amplia experiencia de los integrantes de nuestro grupo, hemos podido aprovechar al máximo y ha sido responsable de nuestro principal crecimiento. </p>
+			<h2 class="text-center" ><?php echo $laEmpresa->post_title; ?></h2>
+
+			
+			<p class="columna c-8 medium-10 small-12 center">
+				<?php echo $laEmpresaContent ?>
+			</p>
 
 		</section>
 
@@ -29,37 +37,30 @@
 
 			<h2 class="text-center" >Nuestras empresas</h2>
 
-			<div class="columna empresa c-3 medium-4 small-6 inmobiliaria">
-				<a data-empresa="belmont-village" href="#"><img src="<?php echo THEMEPATH; ?>images/belmont.jpg" alt=""></a>
-			</div><!-- columna c-3 -->
+			<?php
+			$type = 'nuestras-empresas';
+			$empresasArgs = array(
+				'post_type'		=> $type,
+				'post_per_page'	=> 8
+			);
 
-			<div class="columna empresa c-3 medium-4 small-6 financiera">
-				<a data-empresa="quiero-billete" href="#"><img src="<?php echo THEMEPATH; ?>images/quiero-billete.jpg" alt=""></a>
-			</div><!-- columna c-3 -->
+			$empresasQuery = new WP_Query($empresasArgs);
+			if($empresasQuery -> have_posts()) : while($empresasQuery -> have_posts()) : $empresasQuery ->the_post(); 
 
-			<div class="columna empresa c-3 medium-4 small-6 financiera">
-				<a data-empresa="kiwi" href="#"><img src="<?php echo THEMEPATH; ?>images/kiwi.jpg" alt=""></a>
-			</div><!-- columna c-3 -->
+					if ( has_post_thumbnail() ) {
+					  	$imgUrl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ) ;
+					} ?>
 
-			<div class="columna empresa c-3 medium-4 small-6 financiera">
-				<a data-empresa="habitavi" href="#"><img src="<?php echo THEMEPATH; ?>images/habitavi.jpg" alt=""></a>
-			</div><!-- columna c-3 -->
+					<div class="columna empresa c-3 medium-4 small-6">
+						<a data-empresa="belmont-village" href="#">
+							<img src="<?php echo $imgUrl[0] ?>" alt="">
+						</a>
+					</div> 
 
-			<div class="columna empresa c-3 medium-4 small-6 educacion">
-				<a data-empresa="quiero-confianza" href="#"><img src="<?php echo THEMEPATH; ?>images/quiero-confianza.jpg" alt=""></a>
-			</div><!-- columna c-3 -->
-
-			<div class="columna empresa c-3 medium-4 small-6 it">
-				<a data-empresa="quiero-casa" href="#"><img src="<?php echo THEMEPATH; ?>images/quiero-casa.jpg" alt=""></a>
-			</div><!-- columna c-3 -->
-
-			<div class="columna empresa c-3 medium-4 small-6 it">
-				<a data-empresa="construyendo-y-creciendo" href="#"><img src="<?php echo THEMEPATH; ?>images/construyendo-y-creciendo.jpg" alt=""></a>
-			</div><!-- columna c-3 -->
-
-			<div class="columna empresa c-3 medium-4 small-6 responsabilidad-social">
-				<a data-empresa="tecnologias-en-habilitadoshin" href="#"><img src="<?php echo THEMEPATH; ?>images/tecnologias-en-habilitadoshin.jpg" alt=""></a>
-			</div><!-- columna c-3 -->
+				<?php endwhile;
+			endif;
+			wp_reset_query(); 
+			?>
 
 		</section>
 
@@ -72,32 +73,29 @@
 
 			<h2 class="text-center" >Últimas noticias</h2>
 
-			<div class="post columna c-3 medium-6 small-12 margin-bottom">
-				<img src="<?php echo THEMEPATH; ?>/images/noticia.jpg" alt="">
-				<a href="#"><div class="overlay"></div></a>
-				<h3><a href="#">Egone non intellego</a></h3>
-			</div><!-- post -->
+			<?php
+			$noticiasArgs = array(
+				'category_name' 	=> 'noticias',
+				'posts_per_page' 	=> 4
+			);
+			$noticiasQuery = new WP_Query($noticiasArgs);
 
-			<div class="post columna c-3 medium-6 small-12 margin-bottom">
-				<img src="<?php echo THEMEPATH; ?>/images/noticia.jpg" alt="">
-				<a href="#"><div class="overlay"></div></a>
-				<h3><a href="#">Egone non intellego</a></h3>
-			</div><!-- post -->
+			if( $noticiasQuery->have_posts() ) {
+				while( $noticiasQuery->have_posts() ) : 
+					$noticiasQuery->the_post(); ?>
 
-			<div class="post columna c-3 medium-6 small-12 margin-bottom">
-				<img src="<?php echo THEMEPATH; ?>/images/noticia.jpg" alt="">
-				<a href="#"><div class="overlay"></div></a>
-				<h3><a href="#">Egone non intellego</a></h3>
-			</div><!-- post -->
+					<div class="post columna c-3 medium-6 small-12 margin-bottom">
+						<?php the_post_thumbnail( 'large' ); ?>
+						<a href="<?php the_permalink(); ?>"><div class="overlay"></div></a>
+						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+					</div><!-- post -->
 
-			<div class="post columna c-3 medium-6 small-12 margin-bottom">
-				<img src="<?php echo THEMEPATH; ?>/images/noticia.jpg" alt="">
-				<a href="#"><div class="overlay"></div></a>
-				<h3><a href="#">Egone non intellego</a></h3>
-			</div><!-- post -->
+			<?php endwhile; 
+			} 
+			wp_reset_query(); 
+			?>
 
 		</section>
-
 	</div><!-- width -->
 
 <?php get_footer(); ?>

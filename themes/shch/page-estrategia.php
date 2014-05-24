@@ -6,32 +6,36 @@
 
 	<div class="width">
 
-		<section class="columna c-12 center">
-
-			<div class="icon">
-				<span class="icon-shch"></span>
-				<hr>
-			</div>
-
-			<h2 class="text-center" >Visión de México</h2>
-
-			<p class="columna c-8 medium-10 small-12 center">México es un país con grandes potencialidades pero que al mismo tiempo enfrenta grandes retos. Uno de ellos es justamente la falta de grupos dinámicos de negocio que fomenten la creación de nuevas empresas en distintas industrias y que diversifiquen la oferta del mercado.</p>
-
-			<p class="columna c-8 medium-10 small-12 center">En Industrias SHCH contamos con la visión de un México próspero y de crecimiento acelerado, por lo que buscamos invertir en la creación y desarrollo de distintos negocios que generen empleo y bienestar, así como una opción más para el cliente final.</p>
-
-		</section>
-
 		<section class="columna c-12 center clearfix">
-			<div class="icon">
-				<span class="icon-shch"></span>
-				<hr>
-			</div>
 
-			<h2 class="text-center" >Estrategia</h2>
+			<?php
+			$type = 'estrategia';
+			$estrategiaArgs = array(
+				'category_name'		=> $type,
+				'posts_per_page'	=> 2
+			);
 
-			<p class="columna c-8 medium-10 small-12 center">Nuestro grupo presume de más de 35 años desde sus inicios. Si bien en un principio la principal actividad de negocios se relacionaba meramente con el desarrollo inmobiliario, gracias a la imaginación, creatividad y hambre de crecimiento de los socios del grupo, poco a poco se fueron construyendo y generando nuevas líneas de negocio hasta que para el año de 2012 fue necesario constituir una compañía tenedora que concentrara la dirección y control de los negocios. Así surgió Industrias SHCH la cual hoy en día cuenta con participación en más de 8 empresas, entre las cuales se encuentra Grupo Quiero Casa-Habitavi, Quiero Confianza, Quiero Billete, Bellmont Village México, entre otras.</p>
+			$estrategiaQuery = new WP_Query($estrategiaArgs);
+			if($estrategiaQuery -> have_posts()) {
+				while($estrategiaQuery -> have_posts()) : 
 
+					$estrategiaQuery ->the_post(); 
+					?>
+						
+					<div class="icon">
+						<span class="icon-shch"></span>
+						<hr>
+					</div>
+					
+					<h2 class="text-center" ><?php the_title(); ?></h2>
 
+					<div class="columna c-8 medium-10 small-12 center"><?php the_content(); ?></div>
+
+				<?php endwhile;
+			}
+			wp_reset_query(); 
+			?>
+		
 		</section>
 
 	</div><!-- width -->

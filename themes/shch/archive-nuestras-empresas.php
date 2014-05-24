@@ -27,69 +27,76 @@
 
 			<div id="isotope">
 
-				<div class="columna empresa c-3 medium-4 small-6 inmobiliaria">
-					<a data-empresa="belmont-village" href="#"><img src="<?php echo THEMEPATH; ?>images/belmont.jpg" alt=""></a>
-				</div><!-- columna c-3 -->
+				<?php
 
-				<div class="columna empresa c-3 medium-4 small-6 financiera">
-					<a data-empresa="quiero-billete" href="#"><img src="<?php echo THEMEPATH; ?>images/quiero-billete.jpg" alt=""></a>
-				</div><!-- columna c-3 -->
+				if(have_posts()) : while(have_posts()) : the_post(); 
 
-				<div class="columna empresa c-3 medium-4 small-6 financiera">
-					<a data-empresa="kiwi" href="#"><img src="<?php echo THEMEPATH; ?>images/kiwi.jpg" alt=""></a>
-				</div><!-- columna c-3 -->
+						if ( has_post_thumbnail() ) {
+						  	$imgUrl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ) ;
+						} 
 
-				<div class="columna empresa c-3 medium-4 small-6 financiera">
-					<a data-empresa="habitavi" hrezf="#"><img src="<?php echo THEMEPATH; ?>images/habitavi.jpg" alt=""></a>
-				</div><!-- columna c-3 -->
+						$empresaCategory = get_the_category($post->ID);
+						?>
+						
+						<div class="columna empresa c-3 medium-4 small-6 <?php echo $empresaCategory[0]->slug;  ?>">
+							<a data-empresa="<?php echo basename(get_permalink()); ?>" href="#">
+								<img src="<?php echo $imgUrl[0] ?>" alt="">
+							</a>
+						</div> 
 
-				<div class="columna empresa c-3 medium-4 small-6 educacion">
-					<a data-empresa="quiero-confianza" href="#"><img src="<?php echo THEMEPATH; ?>images/quiero-confianza.jpg" alt=""></a>
-				</div><!-- columna c-3 -->
-
-				<div class="columna empresa c-3 medium-4 small-6 it">
-					<a data-empresa="quiero-casa" href="#"><img src="<?php echo THEMEPATH; ?>images/quiero-casa.jpg" alt=""></a>
-				</div><!-- columna c-3 -->
-
-				<div class="columna empresa c-3 medium-4 small-6 it">
-					<a data-empresa="construyendo-y-creciendo" href="#"><img src="<?php echo THEMEPATH; ?>images/construyendo-y-creciendo.jpg" alt=""></a>
-				</div><!-- columna c-3 -->
-
-				<div class="columna empresa c-3 medium-4 small-6 responsabilidad-social">
-					<a data-empresa="tecnologias-en-habilitadoshin" href="#"><img src="<?php echo THEMEPATH; ?>images/tecnologias-en-habilitadoshin.jpg" alt=""></a>
-				</div><!-- columna c-3 -->
+					<?php endwhile;
+				endif;
+				wp_reset_query(); 
+				?>
 
 			</div><!-- isotope -->
 
 		</section>
 	</div><!-- width -->
 
+	<div class="clear"></div>
+
 	<section class="empresa belmont-village">
 
-		<div class="cover belmont full">
-			<img class="block center columna c-4" src="<?php echo THEMEPATH; ?>images/belmont-blanco.png" alt="">
-		</div><!-- cover -->
+		<?php
 
-		<div class="width clearfix">
+		if(have_posts()) : while(have_posts()) : the_post(); 
 
-			<div class="columna c-6 small-12">
-				<h4>Belmont Village</h4>
-				<p>Diviserunt naturam hominis in animum et corpus. Quae cum dixisset paulumque institisset, Quid est? Haec quo modo conveniant, non sane intellego. Atque haec coniunctio confusioque virtutum tamen a philosophis ratione quadam distinguitur. </p>
-			</div>
+				if ( has_post_thumbnail() ) {
+				  	$imgUrl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ) ;
+				} 
 
-			<div class="columna c-6 small-12 slider cycle-slideshow"
-				data-cycle-fx="scrollHorz"
-				data-cycle-swipe="true"
-			>
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
+				?>
 
-				<div class="cycle-pager"></div>
+				<div class="cover belmont full">
+					<img class="block center columna c-4" src="<?php echo $imgUrl[0] ?>" alt="">
+				</div><!-- cover -->
 
-			</div><!-- slider -->
+				<div class="width clearfix">
 
-		</div><!-- width -->
+					<div class="columna c-6 small-12">
+						<h4>Belmont Village</h4>
+						<p>Diviserunt naturam hominis in animum et corpus. Quae cum dixisset paulumque institisset, Quid est? Haec quo modo conveniant, non sane intellego. Atque haec coniunctio confusioque virtutum tamen a philosophis ratione quadam distinguitur. </p>
+					</div>
+
+					<div class="columna c-6 small-12 slider cycle-slideshow"
+						data-cycle-fx="scrollHorz"
+						data-cycle-swipe="true"
+					>
+						<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
+						<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
+						<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
+
+						<div class="cycle-pager"></div>
+
+					</div><!-- slider -->
+
+				</div><!-- width -->
+
+			<?php endwhile;
+		endif;
+		wp_reset_query(); 
+		?>
 
 	</section>
 

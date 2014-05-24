@@ -28,7 +28,7 @@
 					</h1>
 
 					<nav class="columna c-8 right">
-						<a href="<?php echo site_url('nosotros') ?>">Nosotros</a>
+						<a href="<?php echo site_url('s/nosotros') ?>">Nosotros</a>
 						<a href="<?php echo site_url('nuestras-empresas') ?>">Nuestras empresas</a>
 						<a href="<?php echo site_url('estrategia') ?>">Estrategia</a>
 						<a href="<?php echo site_url('noticias') ?>">Noticias</a>
