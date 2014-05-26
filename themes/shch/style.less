@@ -101,6 +101,7 @@ figure {margin: 0;}
 /*** VARIABLES ***/
 
 @claro: 		#fff;
+@obscuro:       #000;
 @highlight:		#5e6161;
 
 @warning: 		#e74c3c;
@@ -337,11 +338,13 @@ header{ padding: @margen 0;
 	}
 
 	nav{ padding-top: 5%;
-		a{ display: inline-block; vertical-align: middle; width: 19%; padding-bottom: (@margen/2); .font(0.9em, 1.2em); .helvetica(300); letter-spacing: 0.1em; color: @highlight; text-transform: uppercase; text-decoration: none; text-align: center;
+		a{ display: inline-block; vertical-align: middle; width: 19%; padding-bottom: (@margen/2); .font(0.9em, 1.2em); .helvetica(300); letter-spacing: 0.1em; color: @highlight; text-transform: uppercase; text-decoration: none; text-align: center; border-bottom: 1px solid @claro;
 			&:hover, &.activo{ border-bottom: 1px solid @highlight; }
 		}
 	}
 }
+
+#btn-movil { display: none; }
 
 /*** FOOTER ***/
 
@@ -402,8 +405,7 @@ form{
 
 @media only screen and (max-width : 1024px) {
 
-
-
+	.width { width: 85% };
 }
 
 @media only screen and (max-device-width : 1024px) {
@@ -453,6 +455,23 @@ form{
 
 	.divisiones{
 		li{ margin: 0; }
+	}
+
+	header {
+		nav { border-top: 1px solid @highlight; padding-top: 0;
+		}
+		.menu {  display:none; margin:0; float: none; top:0;
+			a { display: block; width:100%; padding: @margen/2;  text-align: center;
+				&.active{ border: none; background: @highlight; color: @claro; }
+				&:hover{ border-bottom: 1px @claro solid; background: @highlight; color: @claro; }
+			}
+		}
+	}
+
+	#btn-movil { display: block; margin-top: @margen; position: absolute; top: @margen; right:@margen;
+		a { font-size: 3em; color: @highlight;
+			&:hover { color: @obscuro; }
+		}
 	}
 
 }

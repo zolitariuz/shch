@@ -4,6 +4,10 @@
 
 	$(function(){
 
+		// Menú móvil
+		mostrarMenu();
+		toggleMenuMovil();
+
 		/**
 		 * Validación de emails
 		 */
@@ -29,6 +33,7 @@
 
 		//Contacto
 		$('form.contacto').validate();
+		procesaContacto();
 
 		//Nuestras empresas - isotope
 		var $container = $('#isotope');
@@ -71,7 +76,57 @@
 			$(this).parent().find('.gris').removeClass('hide').addClass('show');
 		});
 
+		
+
 
 	});
 
+	function procesaContacto(){
+		$('.contacto input[type="submit"]').on('click', function(e){
+			var nombre = $('input[name="nombre"').val();
+			var email = $('input[name="email"').val();
+			var mensaje = $('textarea[name="mensaje"').text();
+
+			e.preventDefault();
+			$.ajax({
+			  	type: 'POST',
+			  	url: ajax_url,
+			  	data: {
+			  		nombre: nombre,
+			  		email: email,
+			  		mensaje: mensaje,
+			  		action: "procesa_contacto"
+			  	},
+			  	success: function(data){
+			  		var json = $.parseJSON(data);
+			  		$('form').html('<p>Gracias por contactarnos '+json.nombre+', en breve nos pondremos en contacto contigo.</p>');
+			  	}
+			});
+		});
+	}
+
+	function mostrarMenu() {
+		$(window).resize(function(){
+			if ($(window).width() > 750)
+		   		$('.menu').attr('style', 'display: block');
+		   	else
+		   		$('.menu').attr('style', 'display: none');
+
+		});
+	}
+
+	function toggleMenuMovil(){
+
+		$('#btn-movil').on('click', function(e){
+			e.preventDefault();
+			if($('.menu').css('display')=='none'){
+				$('.menu').slideDown('fast');
+			} else {
+				$('.menu').slideUp('fast');
+			}
+		});
+	}
+
 })(jQuery);
+
+
