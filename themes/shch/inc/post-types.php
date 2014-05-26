@@ -18,7 +18,7 @@
 			'view_item'     => 'Ver Empresa',
 			'search_items'  => 'Buscar Nuestras empresas',
 			'not_found'     => 'No se encontro',
-			'menu_name'     => 'Nuestras empresass'
+			'menu_name'     => 'Nuestras empresas'
 		);
 
 		$args = array(
@@ -34,7 +34,7 @@
 			'hierarchical'       => false,
 			'menu_position'      => 6,
 			'taxonomies'         => array( 'category' ),
-			'supports'           => array( 'title', 'editor', 'thumbnail' )
+			'supports'           => array( 'title', 'editor' )
 		);
 		register_post_type( 'nuestras-empresas', $args );
 

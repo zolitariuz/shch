@@ -125,6 +125,9 @@
 	require_once('inc/metaboxes.php');
 
 
+	require_once('inc/demo.php');
+
+
 	require_once('inc/taxonomies.php');
 
 
@@ -246,4 +249,4 @@
 			echo 'active';
 	}
 
-	
+

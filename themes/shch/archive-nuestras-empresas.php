@@ -17,37 +17,64 @@
 
 			<h4 class="text-center">Divisiones</h4>
 
+			<?php
+			$customPostTaxonomies = get_object_taxonomies('nuestras-empresas');
+
+			foreach($customPostTaxonomies as $tax) {
+			     $args = array(
+		         	  'orderby' => 'name',
+			          'show_count' => 0,
+		        	  'pad_counts' => 0,
+			          'hierarchical' => 1,
+		        	  'taxonomy' => $tax,
+		        	  'title_li' => ''
+		        	);
+
+			     $divisiones = get_categories( $args );
+			} ?>
+
 			<ul class="divisiones">
 				<li class="activo" data-filer="*">Todas</li>
-				<li data-filter=".inmobiliaria">Inmobiliaria</li>
-				<li data-filter=".it">IT</li>
-				<li data-filter=".financiera">Financiera</li>
-				<li data-filter=".responsabilidad-social">Responsabilidad social</li>
+				<?php foreach ($divisiones as $division) {
+					if ( $division->slug != 'sin-categoria' ){ ?>
+						<li data-filter=".<?php echo $division->slug; ?>"><?php echo $division->name; ?></li>
+				<?php }
+				} ?>
 			</ul>
 
 			<div id="isotope">
 
 				<?php
 
-				if(have_posts()) : while(have_posts()) : the_post(); 
+				if(have_posts()) : while(have_posts()) : the_post();
 
-						if ( has_post_thumbnail() ) {
-						  	$imgUrl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ) ;
-						} 
+					$empresaCategory = get_the_category($post->ID);
 
-						$empresaCategory = get_the_category($post->ID);
-						?>
-						
-						<div class="columna empresa c-3 medium-4 small-6 <?php echo $empresaCategory[0]->slug;  ?>">
+					$logoGrisArgs = array(
+						'type' 	=> 'plupload_image',
+						'size' 	=> 'full'
+					);
+					$logoGrisArray = rwmb_meta( 'nuestras_empresas_plupload-gris', $logoGrisArgs);
+
+					$logoColorArgs = array(
+						'type' 	=> 'plupload_image',
+						'size' 	=> 'full'
+					);
+					$logoColorArray = rwmb_meta( 'nuestras_empresas_plupload-color', $logoColorArgs);
+
+					foreach($logoColorArray as $logoColorItem) {
+						$logoColorItemUrl = $logoColorItem['url'];
+					}
+					foreach ($logoGrisArray as $logoGrisItem) { ?>
+						<div class="columna empresa c-3 medium-4 small-6 <?php echo $empresaCategory[0]->slug; ?>">
 							<a data-empresa="<?php echo basename(get_permalink()); ?>" href="#">
-								<img src="<?php echo $imgUrl[0] ?>" alt="">
+								<img class="gris" src="<?php echo $logoGrisItem['url']; ?>" alt="">
+								<img class="hide color" src="<?php echo $logoColorItemUrl; ?>" alt="">
 							</a>
-						</div> 
+						</div>
+					<?php }
 
-					<?php endwhile;
-				endif;
-				wp_reset_query(); 
-				?>
+				endwhile; endif; wp_reset_query(); ?>
 
 			</div><!-- isotope -->
 
@@ -60,16 +87,12 @@
 
 		<?php
 
-		if(have_posts()) : while(have_posts()) : the_post(); 
-
-				if ( has_post_thumbnail() ) {
-				  	$imgUrl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ) ;
-				} 
+		if(have_posts()) : while(have_posts()) : the_post();
 
 				?>
 
 				<div class="cover belmont full">
-					<img class="block center columna c-4" src="<?php echo $imgUrl[0] ?>" alt="">
+					<img class="block center columna c-4" src="<?php  ?>" alt="">
 				</div><!-- cover -->
 
 				<div class="width clearfix">
@@ -95,7 +118,7 @@
 
 			<?php endwhile;
 		endif;
-		wp_reset_query(); 
+		wp_reset_query();
 		?>
 
 	</section>
