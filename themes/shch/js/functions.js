@@ -4,6 +4,10 @@
 
 	$(function(){
 
+		// Menú móvil
+		mostrarMenu();
+		toggleMenuMovil();
+
 		/**
 		 * Validación de emails
 		 */
@@ -29,6 +33,7 @@
 
 		//Contacto
 		$('form.contacto').validate();
+		procesaContacto();
 
 		//Nuestras empresas - isotope
 		var $container = $('#isotope');
@@ -72,8 +77,7 @@
 			}
 		);
 
-		// Procesa forma de contacto con AJAX
-		procesaContacto();
+		
 
 
 	});
@@ -99,6 +103,28 @@
 			  		$('form').html('<p>Gracias por contactarnos '+json.nombre+', en breve nos pondremos en contacto contigo.</p>');
 			  	}
 			});
+		});
+	}
+
+	function mostrarMenu() {
+		$(window).resize(function(){
+			if ($(window).width() > 750)
+		   		$('.menu').attr('style', 'display: block');
+		   	else
+		   		$('.menu').attr('style', 'display: none');
+
+		});
+	}
+
+	function toggleMenuMovil(){
+
+		$('#btn-movil').on('click', function(e){
+			e.preventDefault();
+			if($('.menu').css('display')=='none'){
+				$('.menu').slideDown('fast');
+			} else {
+				$('.menu').slideUp('fast');
+			}
 		});
 	}
 

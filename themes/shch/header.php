@@ -3,6 +3,8 @@
 		<meta charset="utf-8">
 		<title><?php print_title(); ?></title>
 		<link rel="shortcut icon" href="<?php echo THEMEPATH; ?>images/favicon.ico">
+		<!--Font Awesome-->
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,7 +29,11 @@
 						</a>
 					</h1>
 
-					<nav class="columna c-8 right">
+					<div class="columna right" id="btn-movil">
+						<a href="#"><i class="fa fa-bars"></i></a>
+					</div>
+
+					<nav class="columna c-8 medium-12 right menu">
 						<a href="<?php echo site_url('s/nosotros') ?>">Nosotros</a>
 						<a href="<?php echo site_url('nuestras-empresas') ?>">Nuestras empresas</a>
 						<a href="<?php echo site_url('estrategia') ?>">Estrategia</a>
