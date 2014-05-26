@@ -72,7 +72,36 @@
 			}
 		);
 
+		// Procesa forma de contacto con AJAX
+		procesaContacto();
+
 
 	});
 
+	function procesaContacto(){
+		$('.contacto input[type="submit"]').on('click', function(e){
+			var nombre = $('input[name="nombre"').val();
+			var email = $('input[name="email"').val();
+			var mensaje = $('textarea[name="mensaje"').text();
+
+			e.preventDefault();
+			$.ajax({
+			  	type: 'POST',
+			  	url: ajax_url,
+			  	data: {
+			  		nombre: nombre,
+			  		email: email,
+			  		mensaje: mensaje,
+			  		action: "procesa_contacto"
+			  	},
+			  	success: function(data){
+			  		var json = $.parseJSON(data);
+			  		$('form').html('<p>Gracias por contactarnos '+json.nombre+', en breve nos pondremos en contacto contigo.</p>');
+			  	}
+			});
+		});
+	}
+
 })(jQuery);
+
+

@@ -23,7 +23,7 @@
 
 		// scripts
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.min.js', array('jquery'), '1.0', true );
-		wp_enqueue_script( 'functions', JSPATH.'functions.min.js', array('plugins'), '1.0', true );
+		wp_enqueue_script( 'functions', JSPATH.'functions.js', array('plugins'), '1.0', true );
 
 		// localize scripts
 		wp_localize_script( 'functions', 'ajax_url', admin_url('admin-ajax.php') );
@@ -245,5 +245,35 @@
 			OR isset($query->post_title) AND preg_match("/$string/i", remove_accents(str_replace(' ', '-', $query->post_title) ) ) )
 			echo 'active';
 	}
+
+	/**
+	 * Procesa la forma de contacto
+	 * @return json
+	 */
+	function procesa_contacto(){
+		$nombre = $_POST['nombre'];
+		$email = $_POST['email'];
+		$mensaje = $_POST['mensaje'];
+
+		$to = 'miguel@pcuervo.com';
+		$subject = $nombre.' te ha contactado';
+		$headers = 'From: My Name <miguel@pcuervo.com>' . "\r\n";
+		$message = '<html><body>';
+		$message .= '<h1>Contacto a través de página web SHCH</h1>';
+		$message .= '<p>Nombre: '.$nombre.'</p>';
+		$message .= '<p>Email: '. $email . '</p>';
+		$message .= '<p>Mensaje: '. $mensaje . '</p>';
+		$message .= '</body></html>';
+
+		add_filter('wp_mail_content_type',create_function('', 'return "text/html"; '));
+		wp_mail($to, $subject, $message, $headers );
+		//$nombre = $_POST['nombre'];
+		//$text = array('nombre' => $datos);
+		$msg = ['nombre' => $nombre];
+		echo json_encode($msg);
+		exit;
+	}
+	add_action('wp_ajax_procesa_contacto', 'procesa_contacto');
+	add_action('wp_ajax_nopriv_procesa_contacto', 'procesa_contacto');
 
 	
