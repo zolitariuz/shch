@@ -83,248 +83,56 @@
 
 	<div class="clear"></div>
 
-	<section class="empresa belmont-village">
+	<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 
-		<?php
+		<section class="empresa <?php echo basename(get_permalink()); ?>">
 
-		if(have_posts()) : while(have_posts()) : the_post();
+			<div class="cover belmont full">
 
+				<?php
+				$logoBlancoArgs = array(
+					'type' 	=> 'plupload_image',
+					'size' 	=> 'full'
+				);
+				$logoBlancoArray = rwmb_meta( 'nuestras_empresas_plupload-blanco', $logoBlancoArgs);
+				foreach($logoBlancoArray as $logoBlancoItem) {
+					$logoBlancoItemUrl = $logoBlancoItem['url'];
+				}
 				?>
 
-				<div class="cover belmont full">
-					<img class="block center columna c-4" src="<?php  ?>" alt="">
-				</div><!-- cover -->
-
-				<div class="width clearfix">
-
-					<div class="columna c-6 small-12">
-						<h4>Belmont Village</h4>
-						<p>Diviserunt naturam hominis in animum et corpus. Quae cum dixisset paulumque institisset, Quid est? Haec quo modo conveniant, non sane intellego. Atque haec coniunctio confusioque virtutum tamen a philosophis ratione quadam distinguitur. </p>
-					</div>
-
-					<div class="columna c-6 small-12 slider cycle-slideshow"
-						data-cycle-fx="scrollHorz"
-						data-cycle-swipe="true"
-					>
-						<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-						<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-						<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-
-						<div class="cycle-pager"></div>
-
-					</div><!-- slider -->
-
-				</div><!-- width -->
-
-			<?php endwhile;
-		endif;
-		wp_reset_query();
-		?>
-
-	</section>
-
-	<section class="empresa quiero-billete">
-
-		<div class="cover belmont full">
-			<img class="block center columna c-4" src="<?php echo THEMEPATH; ?>images/quiero-billete-blanco.png" alt="">
-		</div><!-- cover -->
-
-		<div class="width clearfix">
-
-			<div class="columna c-6 small-12">
-				<h4>Quiero billete</h4>
-				<p>Diviserunt naturam hominis in animum et corpus. Quae cum dixisset paulumque institisset, Quid est? Haec quo modo conveniant, non sane intellego. Atque haec coniunctio confusioque virtutum tamen a philosophis ratione quadam distinguitur. </p>
-			</div>
-
-			<div class="columna c-6 small-12 slider cycle-slideshow"
-				data-cycle-fx="scrollHorz"
-				data-cycle-swipe="true"
-			>
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-
-				<div class="cycle-pager"></div>
-
-			</div><!-- slider -->
-
-		</div><!-- width -->
-
-	</section>
-
-	<section class="empresa kiwi">
-
-		<div class="cover belmont full">
-			<img class="block center columna c-4" src="<?php echo THEMEPATH; ?>images/kiwi-blanco.png" alt="">
-		</div><!-- cover -->
-
-		<div class="width clearfix">
-
-			<div class="columna c-6 small-12">
-				<h4>Quiero billete</h4>
-				<p>Diviserunt naturam hominis in animum et corpus. Quae cum dixisset paulumque institisset, Quid est? Haec quo modo conveniant, non sane intellego. Atque haec coniunctio confusioque virtutum tamen a philosophis ratione quadam distinguitur. </p>
-			</div>
-
-			<div class="columna c-6 small-12 slider cycle-slideshow"
-				data-cycle-fx="scrollHorz"
-				data-cycle-swipe="true"
-			>
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-
-				<div class="cycle-pager"></div>
-
-			</div><!-- slider -->
-
-		</div><!-- width -->
-
-	</section>
-
-	<section class="empresa habitavi">
-
-		<div class="cover belmont full">
-			<img class="block center columna c-4" src="<?php echo THEMEPATH; ?>images/habitavi-blanco.png" alt="">
-		</div><!-- cover -->
-
-		<div class="width clearfix">
-
-			<div class="columna c-6 small-12">
-				<h4>Quiero billete</h4>
-				<p>Diviserunt naturam hominis in animum et corpus. Quae cum dixisset paulumque institisset, Quid est? Haec quo modo conveniant, non sane intellego. Atque haec coniunctio confusioque virtutum tamen a philosophis ratione quadam distinguitur. </p>
-			</div>
-
-			<div class="columna c-6 small-12 slider cycle-slideshow"
-				data-cycle-fx="scrollHorz"
-				data-cycle-swipe="true"
-			>
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-
-				<div class="cycle-pager"></div>
-
-			</div><!-- slider -->
-
-		</div><!-- width -->
-
-	</section>
-
-	<section class="empresa quiero-confianza">
-
-		<div class="cover belmont full">
-			<img class="block center columna c-4" src="<?php echo THEMEPATH; ?>images/quiero-confianza-blanco.png" alt="">
-		</div><!-- cover -->
-
-		<div class="width clearfix">
-
-			<div class="columna c-6 small-12">
-				<h4>Quiero billete</h4>
-				<p>Diviserunt naturam hominis in animum et corpus. Quae cum dixisset paulumque institisset, Quid est? Haec quo modo conveniant, non sane intellego. Atque haec coniunctio confusioque virtutum tamen a philosophis ratione quadam distinguitur. </p>
-			</div>
-
-			<div class="columna c-6 small-12 slider cycle-slideshow"
-				data-cycle-fx="scrollHorz"
-				data-cycle-swipe="true"
-			>
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-
-				<div class="cycle-pager"></div>
-
-			</div><!-- slider -->
-
-		</div><!-- width -->
-
-	</section>
-
-	<section class="empresa quiero-casa">
-
-		<div class="cover belmont full">
-			<img class="block center columna c-4" src="<?php echo THEMEPATH; ?>images/quiero-casa-blanco.png" alt="">
-		</div><!-- cover -->
-
-		<div class="width clearfix">
-
-			<div class="columna c-6 small-12">
-				<h4>Quiero billete</h4>
-				<p>Diviserunt naturam hominis in animum et corpus. Quae cum dixisset paulumque institisset, Quid est? Haec quo modo conveniant, non sane intellego. Atque haec coniunctio confusioque virtutum tamen a philosophis ratione quadam distinguitur. </p>
-			</div>
-
-			<div class="columna c-6 small-12 slider cycle-slideshow"
-				data-cycle-fx="scrollHorz"
-				data-cycle-swipe="true"
-			>
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-
-				<div class="cycle-pager"></div>
-
-			</div><!-- slider -->
-
-		</div><!-- width -->
-
-	</section>
-
-	<section class="empresa construyendo-y-creciendo">
-
-		<div class="cover belmont full">
-			<img class="block center columna c-4" src="<?php echo THEMEPATH; ?>images/construyendo-y-creciendo-blanco.png" alt="">
-		</div><!-- cover -->
-
-		<div class="width clearfix">
-
-			<div class="columna c-6 small-12">
-				<h4>Quiero billete</h4>
-				<p>Diviserunt naturam hominis in animum et corpus. Quae cum dixisset paulumque institisset, Quid est? Haec quo modo conveniant, non sane intellego. Atque haec coniunctio confusioque virtutum tamen a philosophis ratione quadam distinguitur. </p>
-			</div>
-
-			<div class="columna c-6 small-12 slider cycle-slideshow"
-				data-cycle-fx="scrollHorz"
-				data-cycle-swipe="true"
-			>
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-
-				<div class="cycle-pager"></div>
-
-			</div><!-- slider -->
-
-		</div><!-- width -->
-
-	</section>
-
-	<section class="empresa tecnologias-en-habilitadoshin">
-
-		<div class="cover belmont full">
-			<img class="block center columna c-5" src="<?php echo THEMEPATH; ?>images/tecnologias-en-habilitadoshin-blanco.png" alt="">
-		</div><!-- cover -->
-
-		<div class="width clearfix">
-
-			<div class="columna c-6 small-12">
-				<h4>Quiero billete</h4>
-				<p>Diviserunt naturam hominis in animum et corpus. Quae cum dixisset paulumque institisset, Quid est? Haec quo modo conveniant, non sane intellego. Atque haec coniunctio confusioque virtutum tamen a philosophis ratione quadam distinguitur. </p>
-			</div>
-
-			<div class="columna c-6 small-12 slider cycle-slideshow"
-				data-cycle-fx="scrollHorz"
-				data-cycle-swipe="true"
-			>
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-				<img src="<?php echo THEMEPATH; ?>images/slider.jpg" alt="">
-
-				<div class="cycle-pager"></div>
-
-			</div><!-- slider -->
-
-		</div><!-- width -->
-
-	</section>
+				<img class="block center columna c-4" src="<?php echo $logoBlancoItemUrl;  ?>" alt="">
+			</div><!-- cover -->
+
+			<div class="width clearfix">
+
+				<div class="columna c-6 small-12">
+					<h4><?php the_title(); ?></h4>
+					<?php the_content(); ?>
+				</div>
+
+				<div class="columna c-6 small-12 slider cycle-slideshow"
+					data-cycle-fx="scrollHorz"
+					data-cycle-swipe="true"
+				>
+					<?php
+					$sliderArgs = array(
+						'type' 	=> 'plupload_image',
+						'size' 	=> 'full'
+					);
+					$sliderArray = rwmb_meta( 'nuestras_empresas_plupload-slider', $sliderArgs);
+					foreach($sliderArray as $sliderItem) { ?>
+						<img src="<?php echo $sliderItem['url']; ?>" alt="">
+					<?php } ?>
+
+					<div class="cycle-pager"></div>
+
+				</div><!-- slider -->
+
+			</div><!-- width -->
+
+		</section>
+
+	<?php endwhile; endif; wp_reset_query(); ?>
 
 
 <?php get_footer(); ?>

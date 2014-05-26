@@ -47,18 +47,30 @@
 			$empresasQuery = new WP_Query($empresasArgs);
 			if($empresasQuery -> have_posts()) : while($empresasQuery -> have_posts()) : $empresasQuery ->the_post();
 
+					$empresaCategory = get_the_category($post->ID);
+
 					$logoGrisArgs = array(
 						'type' 	=> 'plupload_image',
 						'size' 	=> 'full'
 					);
 					$logoGrisArray = rwmb_meta( 'nuestras_empresas_plupload-gris', $logoGrisArgs);
 
+					$logoColorArgs = array(
+						'type' 	=> 'plupload_image',
+						'size' 	=> 'full'
+					);
+					$logoColorArray = rwmb_meta( 'nuestras_empresas_plupload-color', $logoColorArgs);
+
+					foreach($logoColorArray as $logoColorItem) {
+						$logoColorItemUrl = $logoColorItem['url'];
+					}
 					foreach ($logoGrisArray as $logoGrisItem) { ?>
-							<div class="columna empresa c-3 medium-4 small-6">
-								<a data-empresa="belmont-village" href="#">
-									<img src="<?php echo $logoGrisItem['url']; ?>" alt="">
-								</a>
-							</div>
+						<div class="columna empresa c-3 medium-4 small-6 <?php echo $empresaCategory[0]->slug; ?>">
+							<a data-empresa="<?php echo basename(get_permalink()); ?>" href="#">
+								<img class="gris" src="<?php echo $logoGrisItem['url']; ?>" alt="">
+								<img class="hide color" src="<?php echo $logoColorItemUrl; ?>" alt="">
+							</a>
+						</div>
 					<?php }
 			endwhile; endif; wp_reset_query(); ?>
 
