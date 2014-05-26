@@ -7,21 +7,12 @@
 
 	add_action('add_meta_boxes', function(){
 
-		// add_meta_box( id, title, name_meta_callback, post_type, context, priority );
 
 	});
 
 
 
 // CUSTOM METABOXES CALLBACK FUNCTIONS ///////////////////////////////////////////////
-
-
-
-	function name_meta_callback($post){
-		// $name = get_post_meta($post->ID, '_name_meta', true);
-		// wp_nonce_field(__FILE__, '_name_meta_nonce');
-		// echo "<input type='text' class='widefat' id='name' name='_name_meta' value='$name'/>";
-	}
 
 
 
