@@ -34,11 +34,11 @@
 					</div>
 
 					<nav class="columna c-8 medium-12 right menu">
-						<a href="<?php echo site_url('s/nosotros') ?>">Nosotros</a>
-						<a href="<?php echo site_url('nuestras-empresas') ?>">Nuestras empresas</a>
-						<a href="<?php echo site_url('estrategia') ?>">Estrategia</a>
-						<a href="<?php echo site_url('s/noticias') ?>">Noticias</a>
-						<a href="<?php echo site_url('contacto') ?>">Contacto</a>
+						<a <?php if ( is_category('nosotros') ){ echo 'class="active"'; } ?> href="<?php echo site_url('s/nosotros') ?>">Nosotros</a>
+						<a <?php if ( 'nuestras-empresas' == get_post_type() ){ echo 'class="active"'; } ?> href="<?php echo site_url('nuestras-empresas') ?>">Nuestras empresas</a>
+						<a <?php if ( is_page('estrategia') ){ echo 'class="active"'; } ?>href="<?php echo site_url('estrategia') ?>">Estrategia</a>
+						<a <?php if ( is_category('noticias') ){ echo 'class="active"'; } ?> href="<?php echo site_url('s/noticias') ?>">Noticias</a>
+						<a <?php if ( is_page('contacto') ){ echo 'class="active"'; } ?>href="<?php echo site_url('contacto') ?>">Contacto</a>
 					</nav>
 
 				</div><!-- width -->
