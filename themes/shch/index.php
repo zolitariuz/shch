@@ -29,7 +29,14 @@
 
 
 			<p class="columna c-8 medium-10 small-12 center">
-				<?php echo $laEmpresaContent ?>
+				<?php
+					$laEmpresaContent = explode('<!--:--><!--:en-->', $laEmpresaContent);
+					if (qtrans_getLanguage() == 'es'){
+						echo $laEmpresaContent[0];
+					} else {
+						echo $laEmpresaContent[1];
+					}
+				?>
 			</p>
 
 		</section>
