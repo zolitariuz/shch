@@ -63,7 +63,7 @@
 			<ul class="divisiones">
 				<li class="activo" data-filer="*">Todas</li>
 				<?php foreach ($divisiones as $division) {
-					if ( $division->slug != 'sin-categoria' AND $division->slug != 'nosotros' AND $division->slug != 'noticias' AND $division->slug != 'estrategia' ){ ?>
+					if ( $division->slug != 'sin-categoria' AND $division->slug != 'nosotros' AND $division->slug != 'noticias' AND $division->slug != 'estrategia' AND $division->slug != 'contacto' AND $division->slug != 'home' ){ ?>
 						<li data-filter=".<?php echo $division->slug; ?>"><?php echo $division->name; ?></li>
 				<?php }
 				} ?>
