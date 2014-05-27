@@ -36,7 +36,7 @@
 					<?php echo qtrans_generateLanguageSelectCode('text'); ?>
 
 					<nav class="columna c-9 medium-12 right menu">
-						<a href="<?php echo site_url('s/nosotros') ?>">
+						<a href="<?php echo qtrans_convertURL(site_url('s/nosotros')); ?>">
 							<?php if (qtrans_getLanguage() == 'es'){
 								echo 'Nosotros';
 							} else {
