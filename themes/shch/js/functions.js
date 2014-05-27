@@ -118,6 +118,7 @@
 	function toggleMenuMovil(){
 
 		$('#btn-movil').on('click', function(e){
+			console.log('click');
 			e.preventDefault();
 			if($('.menu').css('display')=='none'){
 				$('.menu').slideDown('fast');
