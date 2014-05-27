@@ -30,7 +30,14 @@
 				<hr>
 			</div>
 
-			<h2 class="text-center">Noticias ghb</h2>
+			<h2 class="text-center">
+				<?php if (qtrans_getLanguage() == 'es'){
+					echo 'Noticias';
+				} else {
+					echo 'News';
+				} ?>
+
+			</h2>
 
 			<?php
 			global $wp_query;

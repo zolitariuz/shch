@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 	<div class="hero full">
-		<?php 
+		<?php
 			$coverArgs = array(
 				'category_name'		=> 'nuestras-empresas',
 				'post_type' 		=> 'cover-photos',
@@ -15,7 +15,7 @@
 
 				<img src="<?php echo $imgUrl[0]?>" alt="<?php the_title(); ?>">
 
-			<?php endwhile; endif; wp_reset_query(); 
+			<?php endwhile; endif; wp_reset_query();
 		?>
 	</div><!-- hero -->
 
@@ -36,7 +36,13 @@
 				} ?>
 			</h2>
 
-			<h4 class="text-center">Divisiones</h4>
+			<h4 class="text-center">
+				<?php if (qtrans_getLanguage() == 'es'){
+					echo 'Divisiones';
+				} else {
+					echo 'Divisions';
+				} ?>
+			</h4>
 
 			<?php
 			$customPostTaxonomies = get_object_taxonomies('nuestras-empresas');
@@ -57,7 +63,7 @@
 			<ul class="divisiones">
 				<li class="activo" data-filer="*">Todas</li>
 				<?php foreach ($divisiones as $division) {
-					if ( $division->slug != 'sin-categoria' ){ ?>
+					if ( $division->slug != 'sin-categoria' AND $division->slug != 'nosotros' AND $division->slug != 'noticias' AND $division->slug != 'estrategia' ){ ?>
 						<li data-filter=".<?php echo $division->slug; ?>"><?php echo $division->name; ?></li>
 				<?php }
 				} ?>
@@ -121,7 +127,7 @@
 				}
 				?>
 
-				<img class="block center columna c-4" src="<?php echo $logoBlancoItemUrl;  ?>" alt="">
+				<img class="block center columna c-3" src="<?php echo $logoBlancoItemUrl;  ?>" alt="">
 			</div><!-- cover -->
 
 			<div class="width clearfix">
