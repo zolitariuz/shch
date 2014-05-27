@@ -341,7 +341,7 @@ header{ padding: @margen 0;
 
 	nav{ padding-top: 5%;
 		a{ width: 19%; display: inline-block; vertical-align: middle; padding-bottom: (@margen/2); .font(0.9em, 1.2em); .helvetica(300); letter-spacing: 0.1em; color: @highlight; text-transform: uppercase; text-decoration: none; text-align: center; border-bottom: 1px solid @claro;
-			&:hover, &.activo{ border-bottom: 1px solid @highlight; }
+			&:hover, &.active{ border-bottom: 1px solid @highlight; }
 		}
 	}
 }
@@ -361,7 +361,7 @@ header{ padding: @margen 0;
 footer{ padding: @margen 0; background: url('images/pattern.png') repeat @highlight;
 
 	.icon-shch{ display: block; margin: 0 auto (@margen/2) auto; .font(2em, 1.4em); text-align: center; color: @claro;
-		&:hover{ background: @highlight; color: @claro; }
+		&:hover{ color: @claro; }
 	}
 
 	p{ margin-bottom: 0; color: @claro; .font(0.9em, 1.1em); }
@@ -478,7 +478,7 @@ form{
 		}
 	}
 
-	#btn-movil { display: block; margin-top: @margen; position: absolute; top: @margen; right:@margen;
+	#btn-movil { display: block; margin-top: @margen;
 		a { font-size: 3em; color: @highlight;
 			&:hover { color: @obscuro; }
 		}
@@ -541,6 +541,11 @@ form{
 
 	.divisiones{
 		li{ margin: 0 1%; }
+	}
+
+	#btn-movil { margin-top: @margen/2;
+		a { font-size: 2em;
+		}
 	}
 
 }
