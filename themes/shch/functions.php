@@ -154,9 +154,9 @@
 
 
 
-	/*add_filter('excerpt_length', function($length){
+	add_filter('excerpt_length', function($length){
 		return 20;
-	});*/
+	});
 
 
 	/*add_filter('excerpt_more', function(){
@@ -275,5 +275,7 @@
 	}
 	add_action('wp_ajax_procesa_contacto', 'procesa_contacto');
 	add_action('wp_ajax_nopriv_procesa_contacto', 'procesa_contacto');
+
+
 
 	

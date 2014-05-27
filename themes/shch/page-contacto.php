@@ -1,7 +1,22 @@
 <?php get_header(); ?>
 
 	<div class="hero full">
-		<img src="<?php echo THEMEPATH; ?>/images/hero-nosotros.jpg" alt="SHCH">
+		<?php 
+			$coverArgs = array(
+				'category_name'		=> 'contacto',
+				'post_type' 		=> 'cover-photos',
+				'posts_per_page'	=> 1
+			);
+			$coverQuery = new WP_Query($coverArgs);
+			if($coverQuery -> have_posts()) : while($coverQuery -> have_posts()) : $coverQuery ->the_post();
+
+				$imgUrl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ) ;
+			?>
+
+				<img src="<?php echo $imgUrl[0]?>" alt="<?php the_title(); ?>">
+
+			<?php endwhile; endif; wp_reset_query(); 
+		?>
 	</div><!-- hero -->
 
 	<div class="width clearfix">
