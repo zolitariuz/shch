@@ -125,6 +125,9 @@
 	require_once('inc/metaboxes.php');
 
 
+	require_once('inc/demo.php');
+
+
 	require_once('inc/taxonomies.php');
 
 
@@ -276,6 +279,3 @@
 	add_action('wp_ajax_procesa_contacto', 'procesa_contacto');
 	add_action('wp_ajax_nopriv_procesa_contacto', 'procesa_contacto');
 
-
-
-	

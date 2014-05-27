@@ -21,7 +21,7 @@
 
 			<h2 class="text-center" ><?php echo $laEmpresa->post_title; ?></h2>
 
-			
+
 			<p class="columna c-8 medium-10 small-12 center">
 				<?php echo $laEmpresaContent ?>
 			</p>
@@ -41,26 +41,38 @@
 			$type = 'nuestras-empresas';
 			$empresasArgs = array(
 				'post_type'		=> $type,
-				'post_per_page'	=> 8
+				'post_per_page'	=> 0
 			);
 
 			$empresasQuery = new WP_Query($empresasArgs);
-			if($empresasQuery -> have_posts()) : while($empresasQuery -> have_posts()) : $empresasQuery ->the_post(); 
+			if($empresasQuery -> have_posts()) : while($empresasQuery -> have_posts()) : $empresasQuery ->the_post();
 
-					if ( has_post_thumbnail() ) {
-					  	$imgUrl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ) ;
-					} ?>
+					$empresaCategory = get_the_category($post->ID);
 
-					<div class="columna empresa c-3 medium-4 small-6">
-						<a data-empresa="belmont-village" href="#">
-							<img src="<?php echo $imgUrl[0] ?>" alt="">
-						</a>
-					</div> 
+					$logoGrisArgs = array(
+						'type' 	=> 'plupload_image',
+						'size' 	=> 'full'
+					);
+					$logoGrisArray = rwmb_meta( 'nuestras_empresas_plupload-gris', $logoGrisArgs);
 
-				<?php endwhile;
-			endif;
-			wp_reset_query(); 
-			?>
+					$logoColorArgs = array(
+						'type' 	=> 'plupload_image',
+						'size' 	=> 'full'
+					);
+					$logoColorArray = rwmb_meta( 'nuestras_empresas_plupload-color', $logoColorArgs);
+
+					foreach($logoColorArray as $logoColorItem) {
+						$logoColorItemUrl = $logoColorItem['url'];
+					}
+					foreach ($logoGrisArray as $logoGrisItem) { ?>
+						<div class="columna empresa c-3 medium-4 small-6 <?php echo $empresaCategory[0]->slug; ?>">
+							<a data-empresa="<?php echo basename(get_permalink()); ?>" href="#">
+								<img class="gris" src="<?php echo $logoGrisItem['url']; ?>" alt="">
+								<img class="hide color" src="<?php echo $logoColorItemUrl; ?>" alt="">
+							</a>
+						</div>
+					<?php }
+			endwhile; endif; wp_reset_query(); ?>
 
 		</section>
 
@@ -81,7 +93,7 @@
 			$noticiasQuery = new WP_Query($noticiasArgs);
 
 			if( $noticiasQuery->have_posts() ) {
-				while( $noticiasQuery->have_posts() ) : 
+				while( $noticiasQuery->have_posts() ) :
 					$noticiasQuery->the_post(); ?>
 
 					<div class="post columna c-3 medium-6 small-12 margin-bottom">
@@ -90,9 +102,9 @@
 						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					</div><!-- post -->
 
-			<?php endwhile; 
-			} 
-			wp_reset_query(); 
+			<?php endwhile;
+			}
+			wp_reset_query();
 			?>
 
 		</section>
