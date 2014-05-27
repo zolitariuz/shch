@@ -48,17 +48,18 @@ function qtrans_localeForCurrentLanguage($locale){
 	global $q_config;
 	// try to figure out the correct locale
 	$locale = array();
-	$locale[] = $q_config['locale'][$q_config['language']].".utf8";
-	$locale[] = $q_config['locale'][$q_config['language']]."@euro";
-	$locale[] = $q_config['locale'][$q_config['language']];
-	$locale[] = $q_config['windows_locale'][$q_config['language']];
-	$locale[] = $q_config['language'];
+	$lang = isset ($q_config['language'])? $q_config['language'] : 'en';
+	$locale[] = $q_config['locale'][$lang].".utf8";
+	$locale[] = $q_config['locale'][$lang]."@euro";
+	$locale[] = $q_config['locale'][$lang];
+	$locale[] = $q_config['windows_locale'][$lang];
+	$locale[] = $lang;
 	
 	// return the correct locale and most importantly set it (wordpress doesn't, which is bad)
 	// only set LC_TIME as everyhing else doesn't seem to work with windows
 	setlocale(LC_TIME, $locale);
 	
-	return $q_config['locale'][$q_config['language']];
+	return $q_config['locale'][$lang];
 }
 
 function qtrans_optionFilter($do='enable') {
