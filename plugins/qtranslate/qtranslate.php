@@ -37,7 +37,7 @@ Tags: multilingual, multi, language, admin, tinymce, qTranslate, Polyglot, bilin
 	fi by Tatu Siltanen
 	fr by Damien Choizit
 	nl by RobV
-	sv by bear3556, johdah 
+	sv by bear3556, johdah
 	it by Lorenzo De Tomasi
 	ro, hu by Jani Monoses
 	ja by Brian Parker
@@ -46,7 +46,7 @@ Tags: multilingual, multi, language, admin, tinymce, qTranslate, Polyglot, bilin
 	ar by Mohamed Magdy
 	pt by netolazaro
 	gl by Andrés Bott
-	
+
 	Plugin Translation Contributers
 	===============================
 	en, de by Qian Qin
@@ -72,7 +72,7 @@ Tags: multilingual, multi, language, admin, tinymce, qTranslate, Polyglot, bilin
 	ru by viaestvita
 	ro by ipuiu
 	sv by tobi
-	
+
 	Sponsored Features
 	==================
 	Excerpt Translation by bastiaan van rooden (www.nothing.ch)
@@ -104,7 +104,7 @@ define('QT_STRFTIME',			4);
 // enable the use of following languages (order=>language)
 $q_config['enabled_languages'] = array(
 		'0' => 'de',
-		'1' => 'en', 
+		'1' => 'en',
 		'2' => 'zh'
 	);
 
@@ -123,7 +123,7 @@ $q_config['auto_update_mo'] = true;
 // hide language tag for default language
 $q_config['hide_default_language'] = true;
 
-// sets default url mode 
+// sets default url mode
 // QT_URL_QUERY - query (questionmark)
 // QT_URL_PATH - pre-path
 // QT_URL_DOMAIN - pre-domain
@@ -160,7 +160,7 @@ $q_config['language_name']['it'] = "Italiano";
 $q_config['language_name']['ro'] = "Română";
 $q_config['language_name']['hu'] = "Magyar";
 $q_config['language_name']['ja'] = "日本語";
-$q_config['language_name']['es'] = "Español";
+$q_config['language_name']['es'] = "Es";
 $q_config['language_name']['vi'] = "Tiếng Việt";
 $q_config['language_name']['ar'] = "العربية";
 $q_config['language_name']['pt'] = "Português";

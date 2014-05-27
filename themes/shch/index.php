@@ -19,7 +19,13 @@
 			$laEmpresaContent = $laEmpresa->post_content;
 			?>
 
-			<h2 class="text-center" ><?php echo $laEmpresa->post_title; ?></h2>
+			<h2 class="text-center" >
+				<?php if (qtrans_getLanguage() == 'es'){
+					echo 'La empresa';
+				} else {
+					echo 'The company';
+				} ?>
+			</h2>
 
 
 			<p class="columna c-8 medium-10 small-12 center">
@@ -35,7 +41,13 @@
 				<hr>
 			</a>
 
-			<h2 class="text-center" >Nuestras empresas</h2>
+			<h2 class="text-center" >
+				<?php if (qtrans_getLanguage() == 'es'){
+					echo 'Nuestras empresas';
+				} else {
+					echo 'Our Companies';
+				} ?>
+			</h2>
 
 			<?php
 			$type = 'nuestras-empresas';
@@ -83,7 +95,13 @@
 				<hr>
 			</a>
 
-			<h2 class="text-center" >Últimas noticias</h2>
+			<h2 class="text-center" >
+				<?php if (qtrans_getLanguage() == 'es'){
+					echo 'Últimas noticias';
+				} else {
+					echo 'Latest news';
+				} ?>
+			</h2>
 
 			<?php
 			$noticiasArgs = array(

@@ -24,10 +24,10 @@ class qTranslateWidget extends WP_Widget {
 		$widget_ops = array('classname' => 'widget_qtranslate', 'description' => __('Allows your visitors to choose a Language.','qtranslate') );
 		$this->WP_Widget('qtranslate', __('qTranslate Language Chooser','qtranslate'), $widget_ops);
 	}
-	
+
 	function widget($args, $instance) {
 		extract($args);
-		
+
 		echo $before_widget;
 		$title = empty($instance['title']) ? __('Language', 'qtranslate') : apply_filters('widget_title', $instance['title']);
 		$hide_title = empty($instance['hide-title']) ? false : 'on';
@@ -38,7 +38,7 @@ class qTranslateWidget extends WP_Widget {
 		qtrans_generateLanguageSelectCode($type, $this->id);
 		echo $after_widget;
 	}
-	
+
 	function update($new_instance, $old_instance) {
 		$instance = $old_instance;
 		$instance['title'] = $new_instance['title'];
@@ -47,7 +47,7 @@ class qTranslateWidget extends WP_Widget {
 
 		return $instance;
 	}
-	
+
 	function form($instance) {
 		$instance = wp_parse_args( (array) $instance, array( 'title' => '', 'hide-title' => false, 'type' => 'text' ) );
 		$title = $instance['title'];
@@ -77,12 +77,12 @@ function qtrans_generateLanguageSelectCode($style='', $id='') {
 		case 'image':
 		case 'text':
 		case 'dropdown':
-			echo '<ul class="qtrans_language_chooser" id="'.$id.'">';
+			echo '<ul class="qtrans_language_chooser clearfix columna c-4" id="'.$id.'">';
 			foreach(qtrans_getSortedLanguages() as $language) {
 				$classes = array('lang-'.$language);
 				if($language == $q_config['language'])
 					$classes[] = 'active';
-				echo '<li class="'. implode(' ', $classes) .'"><a href="'.qtrans_convertURL($url, $language).'"';
+				echo '<li><a class="'. implode(' ', $classes) .'" href="'.qtrans_convertURL($url, $language).'"';
 				// set hreflang
 				echo ' hreflang="'.$language.'" title="'.$q_config['language_name'][$language].'"';
 				if($style=='image')
@@ -91,6 +91,11 @@ function qtrans_generateLanguageSelectCode($style='', $id='') {
 				if($style=='image')
 					echo ' style="display:none"';
 				echo '>'.$q_config['language_name'][$language].'</span></a></li>';
+			}
+			if (qtrans_getLanguage() == 'es'){
+				echo '<li>Idioma: </li>';
+			} else {
+				echo '<li>Language: </li>';
 			}
 			echo "</ul><div class=\"qtrans_widget_end\"></div>";
 			if($style=='dropdown') {

@@ -24,7 +24,7 @@
 				<div class="width clearfix">
 
 					<h1 class="block columna">
-						<a href="<?php echo site_url(); ?>">
+						<a href="<?php echo qtrans_convertURL(site_url()); ?>">
 							<img src="<?php echo THEMEPATH; ?>/images/logo-shch.png" alt="" />
 						</a>
 					</h1>
@@ -33,13 +33,46 @@
 						<a href="#"><i class="fa fa-bars"></i></a>
 					</div>
 
-					<nav class="columna c-8 medium-12 right menu">
-						<a href="<?php echo site_url('s/nosotros') ?>">Nosotros</a>
-						<a href="<?php echo site_url('nuestras-empresas') ?>">Nuestras empresas</a>
-						<a href="<?php echo site_url('estrategia') ?>">Estrategia</a>
-						<a href="<?php echo site_url('noticias') ?>">Noticias</a>
-						<a href="<?php echo site_url('contacto') ?>">Contacto</a>
+					<?php echo qtrans_generateLanguageSelectCode('text'); ?>
+
+					<nav class="columna c-9 medium-12 right menu">
+						<a href="<?php echo site_url('s/nosotros') ?>">
+							<?php if (qtrans_getLanguage() == 'es'){
+								echo 'Nosotros';
+							} else {
+								echo 'Us';
+							} ?>
+						</a>
+						<a href="<?php echo qtrans_convertURL(site_url('nuestras-empresas/'));  ?>">
+							<?php if (qtrans_getLanguage() == 'es'){
+								echo 'Nuestras empresas';
+							} else {
+								echo 'Our companies';
+							} ?>
+						</a>
+						<a href="<?php echo qtrans_convertURL(site_url('estrategia/')); ?>">
+							<?php if (qtrans_getLanguage() == 'es'){
+								echo 'Estrategia';
+							} else {
+								echo 'Strategy';
+							} ?>
+						</a>
+						<a href="<?php echo qtrans_convertURL(site_url('noticias/')); ?>">
+							<?php if (qtrans_getLanguage() == 'es'){
+								echo 'Noticias';
+							} else {
+								echo 'News';
+							} ?>
+						</a>
+						<a href="<?php echo qtrans_convertURL(site_url('contacto/')); ?>">
+							<?php if (qtrans_getLanguage() == 'es'){
+								echo 'Contacto';
+							} else {
+								echo 'Contact';
+							} ?>
+						</a>
 					</nav>
+
 
 				</div><!-- width -->
 

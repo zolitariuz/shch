@@ -13,20 +13,7 @@
 				<hr>
 			</div>
 
-			<?php
-			$type = 'nosotros';
-			$nosotrosArgs = array(
-				'category_name'		=> $type,
-				'posts_per_page'	=> 2
-			);
-
-
-			$nosotrosQuery = new WP_Query($nosotrosArgs);
-			if($nosotrosQuery -> have_posts()) {
-				while($nosotrosQuery -> have_posts()) : 
-
-					$nosotrosQuery ->the_post(); 
-					?>
+			<?php if( have_posts()) : while( have_posts()) :  the_post(); ?>
 
 					<h2 class="text-center" ><?php the_title(); ?></h2>
 
@@ -36,17 +23,14 @@
 					?>
 
 						<img class="block columna c-10 small-12 margin-bottom center" src="<?php echo $imgUrl[0]?> " alt="">
-					
+
 					<?php } ?>
 
 					<div class="columna c-8 medium-10 small-12 center"><?php the_content(); ?></div>
 
-				<?php endwhile;
-			}
-			wp_reset_query(); 
-			?>
+				<?php endwhile; endif; wp_reset_query(); ?>
 
-			
+
 
 		</section>
 

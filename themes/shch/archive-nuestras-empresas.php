@@ -13,7 +13,13 @@
 				<hr>
 			</div>
 
-			<h2 class="text-center" >Nuestras empresas</h2>
+			<h2 class="text-center">
+				<?php if (qtrans_getLanguage() == 'es'){
+					echo 'Nuestras empresas';
+				} else {
+					echo 'Our companies';
+				} ?>
+			</h2>
 
 			<h4 class="text-center">Divisiones</h4>
 

@@ -177,7 +177,12 @@
 		return remove_accents($filename);
 	});
 
+// ESCONDE NOTIFICACIONES DE UPDATE WP //////////////////////////////////////////////////////
 
+add_action('admin_menu','wphidenag');
+function wphidenag() {
+	remove_action( 'admin_notices', 'update_nag', 3 );
+}
 
 // HELPER METHODS AND FUNCTIONS //////////////////////////////////////////////////////
 

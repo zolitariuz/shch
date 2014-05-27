@@ -331,6 +331,8 @@ section{ margin-bottom: (@margen*2) !important;
 
 header{ padding: @margen 0;
 
+	> div{ position: relative; }
+
 	h1{ width: 16%;
 		a{
 			img{ }
@@ -338,8 +340,16 @@ header{ padding: @margen 0;
 	}
 
 	nav{ padding-top: 5%;
-		a{ display: inline-block; vertical-align: middle; width: 19%; padding-bottom: (@margen/2); .font(0.9em, 1.2em); .helvetica(300); letter-spacing: 0.1em; color: @highlight; text-transform: uppercase; text-decoration: none; text-align: center; border-bottom: 1px solid @claro;
+		a{ width: 19%; display: inline-block; vertical-align: middle; padding-bottom: (@margen/2); .font(0.9em, 1.2em); .helvetica(300); letter-spacing: 0.1em; color: @highlight; text-transform: uppercase; text-decoration: none; text-align: center; border-bottom: 1px solid @claro;
 			&:hover, &.activo{ border-bottom: 1px solid @highlight; }
+		}
+	}
+}
+
+.qtrans_language_chooser{ margin: 0; position: absolute; top: 0; right: 0;
+	li{ display: inline-block; margin-left: 5%; .font(0.9em, 1.2em); .helvetica(300); letter-spacing: 0.1em; color: @highlight; text-transform: uppercase; text-align: right; list-style: none; float: right;
+		a{ width: 100%; padding-bottom: 0; color: @highlight; text-decoration: none;  border-bottom: 1px solid @claro;
+			&:hover, &.active{ border-bottom: 1px solid @highlight; }
 		}
 	}
 }
