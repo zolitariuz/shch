@@ -36,35 +36,35 @@
 					<?php echo qtrans_generateLanguageSelectCode('text'); ?>
 
 					<nav class="columna c-9 medium-12 right menu">
-						<a href="<?php echo qtrans_convertURL(site_url('s/nosotros')); ?>">
+						<a <?php if ( is_category('nosotros') ){ echo 'class="active"'; } ?> href="<?php echo qtrans_convertURL(site_url('s/nosotros')); ?>">
 							<?php if (qtrans_getLanguage() == 'es'){
 								echo 'Nosotros';
 							} else {
 								echo 'Us';
 							} ?>
 						</a>
-						<a href="<?php echo qtrans_convertURL(site_url('nuestras-empresas/'));  ?>">
+						<a <?php if ( 'nuestras-empresas' == get_post_type() ){ echo 'class="active"'; } ?>href="<?php echo qtrans_convertURL(site_url('nuestras-empresas/'));  ?>">
 							<?php if (qtrans_getLanguage() == 'es'){
 								echo 'Nuestras empresas';
 							} else {
 								echo 'Our companies';
 							} ?>
 						</a>
-						<a href="<?php echo qtrans_convertURL(site_url('s/estrategia/')); ?>">
+						<a <?php if ( is_category('estrategia') ){ echo 'class="active"'; } ?>href="<?php echo qtrans_convertURL(site_url('s/estrategia/')); ?>">
 							<?php if (qtrans_getLanguage() == 'es'){
 								echo 'Estrategia';
 							} else {
 								echo 'Strategy';
 							} ?>
 						</a>
-						<a href="<?php echo qtrans_convertURL(site_url('s/noticias/')); ?>">
+						<a <?php if ( is_category('noticias') ){ echo 'class="active"'; } ?>href="<?php echo qtrans_convertURL(site_url('s/noticias/')); ?>">
 							<?php if (qtrans_getLanguage() == 'es'){
 								echo 'Noticias';
 							} else {
 								echo 'News';
 							} ?>
 						</a>
-						<a href="<?php echo qtrans_convertURL(site_url('contacto/')); ?>">
+						<a <?php if ( is_page('contacto') ){ echo 'class="active"'; } ?>href="<?php echo qtrans_convertURL(site_url('contacto/')); ?>">
 							<?php if (qtrans_getLanguage() == 'es'){
 								echo 'Contacto';
 							} else {
