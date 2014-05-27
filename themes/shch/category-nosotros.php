@@ -15,7 +15,7 @@
 
 				<img src="<?php echo $imgUrl[0]?>" alt="<?php the_title(); ?>">
 
-			<?php endwhile; endif; wp_reset_query();
+			<?php endwhile; endif; wp_reset_postdata();
 		?>
 	</div><!-- hero -->
 
@@ -28,22 +28,22 @@
 				<hr>
 			</div>
 
-			<?php if( have_posts()) : while( have_posts()) :  the_post(); ?>
+			<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
-					<h2 class="text-center" ><?php the_title(); ?></h2>
+				<h2 class="text-center" ><?php the_title(); ?></h2>
 
-					<?php
-					if ( has_post_thumbnail() ) {
-					  	$imgUrl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ) ;
-					?>
+				<?php
+				if ( has_post_thumbnail() ) {
+				$imgUrl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ) ;
+				?>
 
-						<img class="block columna c-10 small-12 margin-bottom center" src="<?php echo $imgUrl[0]?> " alt="">
+					<img class="block columna c-10 small-12 margin-bottom center" src="<?php echo $imgUrl[0]?> " alt="">
 
-					<?php } ?>
+				<?php } ?>
 
-					<div class="columna c-8 medium-10 small-12 center"><?php the_content(); ?></div>
+				<div class="columna c-8 medium-10 small-12 center"><?php the_content(); ?></div>
 
-				<?php endwhile; endif; wp_reset_query(); ?>
+			<?php endwhile; endif; wp_reset_query(); ?>
 
 		</section>
 

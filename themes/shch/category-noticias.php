@@ -2,7 +2,7 @@
 
 	<div class="hero full">
 
-		<?php 
+		<?php
 			$coverArgs = array(
 				'category_name'		=> 'noticias',
 				'post_type' 		=> 'cover-photos',
@@ -16,7 +16,7 @@
 
 				<img src="<?php echo $imgUrl[0]?>" alt="<?php the_title(); ?>">
 
-			<?php endwhile; endif; wp_reset_query(); 
+			<?php endwhile; endif; wp_reset_query();
 		?>
 
 	</div><!-- hero -->
@@ -30,11 +30,11 @@
 				<hr>
 			</div>
 
-			<h2 class="text-center" >Noticias</h2>
+			<h2 class="text-center">Noticias ghb</h2>
 
 			<?php
 			global $wp_query;
-			if(have_posts()) : while(have_posts()) : the_post(); 
+			if(have_posts()) : while(have_posts()) : the_post();
 
 					if ( has_post_thumbnail() ) {
 						$imgUrl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ) ;
@@ -46,7 +46,7 @@
 						<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
 						<p><?php the_excerpt(); ?></p>
 					</div><!-- post -->
-	
+
 			<?php endwhile; endif; wp_reset_query(); ?>
 
 			<div class="columna full text-center">
@@ -59,7 +59,6 @@
 					'current' => max( 1, get_query_var('paged') ),
 					'total' => $wp_query->max_num_pages
 				) );
-
 			?>
 			</div>
 		</section>

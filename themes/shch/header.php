@@ -50,14 +50,14 @@
 								echo 'Our companies';
 							} ?>
 						</a>
-						<a href="<?php echo qtrans_convertURL(site_url('estrategia/')); ?>">
+						<a href="<?php echo qtrans_convertURL(site_url('s/estrategia/')); ?>">
 							<?php if (qtrans_getLanguage() == 'es'){
 								echo 'Estrategia';
 							} else {
 								echo 'Strategy';
 							} ?>
 						</a>
-						<a href="<?php echo qtrans_convertURL(site_url('noticias/')); ?>">
+						<a href="<?php echo qtrans_convertURL(site_url('s/noticias/')); ?>">
 							<?php if (qtrans_getLanguage() == 'es'){
 								echo 'Noticias';
 							} else {

@@ -53,10 +53,11 @@
 			$type = 'nuestras-empresas';
 			$empresasArgs = array(
 				'post_type'		=> $type,
-				'post_per_page'	=> 0
+				'post_per_page'	=> -1
 			);
 
 			$empresasQuery = new WP_Query($empresasArgs);
+
 			if($empresasQuery -> have_posts()) : while($empresasQuery -> have_posts()) : $empresasQuery ->the_post();
 
 					$empresaCategory = get_the_category($post->ID);
@@ -84,7 +85,7 @@
 							</a>
 						</div>
 					<?php }
-			endwhile; endif; wp_reset_query(); ?>
+			endwhile; endif; wp_reset_postdata(); ?>
 
 		</section>
 
@@ -110,9 +111,7 @@
 			);
 			$noticiasQuery = new WP_Query($noticiasArgs);
 
-			if( $noticiasQuery->have_posts() ) {
-				while( $noticiasQuery->have_posts() ) :
-					$noticiasQuery->the_post(); ?>
+			if( $noticiasQuery->have_posts() ) : while( $noticiasQuery->have_posts() ) : $noticiasQuery->the_post(); ?>
 
 					<div class="post columna c-3 medium-6 small-12 margin-bottom">
 						<?php the_post_thumbnail( 'large' ); ?>
@@ -120,10 +119,7 @@
 						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					</div><!-- post -->
 
-			<?php endwhile;
-			}
-			wp_reset_query();
-			?>
+			<?php endwhile; endif; wp_reset_query(); ?>
 
 		</section>
 	</div><!-- width -->
