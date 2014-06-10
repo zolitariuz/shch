@@ -30,19 +30,11 @@
 
 			<h2 class="text-center">
 				<?php if (qtrans_getLanguage() == 'es'){
-					echo 'Nuestras empresas';
-				} else {
-					echo 'Our companies';
-				} ?>
-			</h2>
-
-			<h4 class="text-center">
-				<?php if (qtrans_getLanguage() == 'es'){
 					echo 'Divisiones';
 				} else {
 					echo 'Divisions';
 				} ?>
-			</h4>
+			</h2>
 
 			<?php
 			$customPostTaxonomies = get_object_taxonomies('nuestras-empresas');
@@ -64,7 +56,7 @@
 				<li class="activo" data-filer="*">Todas</li>
 				<?php foreach ($divisiones as $division) {
 					if ( $division->slug != 'sin-categoria' AND $division->slug != 'nosotros' AND $division->slug != 'noticias' AND $division->slug != 'estrategia' AND $division->slug != 'contacto' AND $division->slug != 'home' ){ ?>
-						<li data-filter=".<?php echo $division->slug; ?>"><?php echo $division->name; ?></li>
+						<li data-filter=".<?php echo $division->slug; ?>"><i class="fa fa-usd"></i><?php echo $division->name; ?></li>
 				<?php }
 				} ?>
 			</ul>

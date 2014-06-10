@@ -40,7 +40,7 @@
 							<?php if (qtrans_getLanguage() == 'es'){
 								echo 'Nosotros';
 							} else {
-								echo 'Us';
+								echo 'Who we are';
 							} ?>
 						</a>
 						<a <?php if ( 'nuestras-empresas' == get_post_type() ){ echo 'class="active"'; } ?>href="<?php echo qtrans_convertURL(site_url('nuestras-empresas/'));  ?>">

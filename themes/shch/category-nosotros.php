@@ -23,12 +23,12 @@
 
 		<section class="columna c-12 center">
 
-			<div class="icon">
-				<span class="icon-shch"></span>
-				<hr>
-			</div>
-
 			<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+
+				<div class="icon">
+					<span class="icon-shch"></span>
+					<hr>
+				</div>
 
 				<h2 class="text-center" ><?php the_title(); ?></h2>
 
