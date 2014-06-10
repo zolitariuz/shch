@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header(); the_post(); ?>
 
 	<div class="hero full">
 		<?php
@@ -35,6 +35,8 @@
 					echo 'Contact';
 				} ?>
 			</h2>
+
+			<div class="text-center" ><?php the_content(); ?></div>
 
 			<form class="contacto columna c-8 small-12 center" method="post">
 

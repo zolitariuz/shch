@@ -53,9 +53,15 @@
 			} ?>
 
 			<ul class="divisiones">
-				<li class="activo" data-filer="*">Todas</li>
+				<li class="activo" data-filer="*">
+					<?php if (qtrans_getLanguage() == 'es'){
+						echo 'Todas';
+					} else {
+						echo 'All';
+					} ?>
+				</li>
 				<?php foreach ($divisiones as $division) {
-					if ( $division->slug != 'sin-categoria' AND $division->slug != 'nosotros' AND $division->slug != 'noticias' AND $division->slug != 'estrategia' AND $division->slug != 'contacto' AND $division->slug != 'home' ){ ?>
+					if ( $division->slug != 'sin-categoria' AND $division->slug != 'nosotros' AND $division->slug != 'noticias' AND $division->slug != 'estrategia' AND $division->slug != 'contacto' AND $division->slug != 'home'  AND $division->slug != 'nuestras-empresas' ){ ?>
 						<li data-filter=".<?php echo $division->slug; ?>"><i class="fa fa-usd"></i><?php echo $division->name; ?></li>
 				<?php }
 				} ?>
