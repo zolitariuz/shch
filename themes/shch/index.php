@@ -30,7 +30,8 @@
 
 			<p class="columna c-8 medium-10 small-12 center">
 				<?php
-					$laEmpresaContent = explode('<!--:--><!--:en-->', $laEmpresaContent);
+					$laEmpresaContent = explode('<!--:--><!--:en-->', $laEmpresaContent); 
+
 					if (qtrans_getLanguage() == 'es'){
 						echo $laEmpresaContent[0];
 					} else {
