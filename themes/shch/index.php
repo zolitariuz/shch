@@ -14,7 +14,7 @@
 			</a>
 
 			<?php
-			$laEmpresa = get_page_by_title( 'La empresa' );
+			$laEmpresa = get_page_by_path( 'la-empresa' );
 			$laEmpresaId = $laEmpresa->ID;
 			$laEmpresaContent = $laEmpresa->post_content;
 			?>
