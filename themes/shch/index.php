@@ -8,7 +8,7 @@
 
 		<section class="columna c-12 center">
 
-			<a href="<?php echo site_url('nosotros') ?>" class="icon block">
+			<a href="<?php echo site_url('nosotros') ?>" class="icon link block">
 				<span class="icon-shch"></span>
 				<hr>
 			</a>
@@ -43,7 +43,7 @@
 
 		<section class="columna c-12 center clearfix">
 
-			<a href="<?php echo site_url('nuestras-empresas') ?>" class="icon block">
+			<a href="<?php echo site_url('nuestras-empresas') ?>" class="icon link block">
 				<span class="icon-shch"></span>
 				<hr>
 			</a>
@@ -98,7 +98,7 @@
 
 		<section class="columna c-12 center clearfix">
 
-			<a href="<?php echo site_url('noticias') ?>" class="icon block">
+			<a href="<?php echo site_url('noticias') ?>" class="icon link block">
 				<span class="icon-shch"></span>
 				<hr>
 			</a>

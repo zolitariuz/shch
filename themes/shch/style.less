@@ -297,8 +297,11 @@ h4{  margin: 0 0 @margen 0; .font(1em, 1em); letter-spacing: 0.2em; .helvetica(3
 //Seccion
 section{ margin-bottom: (@margen*4) !important;
 	.icon{ margin: 0 0 @margen 0; text-decoration: none; position: relative;
-		span{ display: block; width: (@margen*2); height: (@margen*2); margin: auto; .font(2em, 1.4em); text-align: center; color: @highlight; background: @claro; .border-radius(20px); position: relative; top: 10px; z-index: 2; .transition;
-			&:hover{ background: @highlight; color: @claro; }
+		span{ display: block; width: (@margen*2); height: (@margen*2); margin: auto; .font(2em, 1.4em); text-align: center; color: @highlight; background: @claro; .border-radius(20px); position: relative; top: 10px; z-index: 2; .transition; }
+		&.link{
+			span{
+				&:hover{ background: @highlight; color: @claro; }
+			}
 		}
 		hr{ height: 1px; border: 0; margin: 0; background: @highlight; position: relative; top: -10px; z-index: 1; }
 	}
@@ -370,7 +373,8 @@ footer{ padding: @margen 0; background: url('images/pattern.png') repeat @highli
 /*** NUESTRAS EMPRESAS ***/
 
 .divisiones{ margin: 0 0 (@margen*2) 0; list-style: none; text-align: center;
-	li{ display: inline-block; margin: 0 1%; padding: @margen/2 @margen/2 @margen/2 @margen/2; border: 1px solid @highlight; .font(1em, 1em); color: @highlight; cursor: pointer; .transition;
+	li{ display: inline-block; margin: 0 2% @margen 2%; padding: @margen/2 @margen/2 @margen/2 @margen/2; border-bottom: 1px solid @highlight; text-transform: uppercase; letter-spacing: 0.1em; .font(1em, 1em); color: @highlight; cursor: pointer; .transition;
+		i{ display: none; margin-right: (@margen/2); padding: (@margen/4); background: @highlight; color: @claro; }
 		&:hover, &.activo{ background: @highlight; color: @claro; }
 	}
 }
